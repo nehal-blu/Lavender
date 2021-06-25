@@ -1,0 +1,1177 @@
+[
+  {
+    "textPayload": "time=2020-01-14 18:51:07,875 level=INFO module=RepoInterface:call_repo_provider msg=\"Calling repo API at URL https://api.github.com/graphql with method POST with payload b'{\"query\": \"\\\\n            query {\\\\n                organization(login: \\\\\"blubracket\\\\\") {\\\\n                    repositories(first: 100, after: \\\\\"Y3Vyc29yOnYyOpHOC1RGQA==\\\\\") {\\\\n                        edges {\\\\n                            node {\\\\n                                url\\\\n                                collaborators {\\\\n                                    edges {\\\\n                                        node {\\\\n                                            login\\\\n                                            email\\\\n                                        }\\\\n                                        permissionSources {\\\\n                                            permission\\\\n                                        }\\\\n                                    }\\\\n                                }\\\\n                            }\\\\n                            cursor\\\\n                        }\\\\n                    }\\\\n                }\\\\n            }\\\\n            \"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "qx7loqrogd5672idg",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-git-gateway-95c9db96b-swg2s",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:07.876233147Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:10.598386548Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:07,873 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"data\":{\"organization\":{\"repositories\":{\"edges\":[{\"node\":{\"url\":\"https://github.com/BluBracket/automation\",\"collaborators\":{\"edges\":[{\"node\":{\"login\":\"turtlecoder\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"duneja\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"malikoth\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"pgerlich\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"},{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"benchstr\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"vineetks\",\"email\":\"vineetkr.999@gmail.com\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"haribhansingh2011\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"prakashlinga\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"vladimir-buzuev\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"alexblu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"srinivasakartheek\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"hendrik-yeh\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"nehalagrawal-blu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"arnob93\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"paymanblu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]}]}},\"cursor\":\"Y3Vyc29yOnYyOpHOCnWmHA==\"},{\"node\":{\"url\":\"https://github.com/BluBracket/portal\",\"collaborators\":{\"edges\":[{\"node\":{\"login\":\"turtlecoder\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"duneja\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"malikoth\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"pgerlich\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"},{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"benchstr\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"vineetks\",\"email\":\"vineetkr.999@gmail.com\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"haribhansingh2011\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"prakashlinga\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"vladimir-buzuev\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"alexblu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"srinivasakartheek\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"hendrik-yeh\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"nehalagrawal-blu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"arnob93\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"paymanblu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]}]}},\"cursor\":\"Y3Vyc29yOnYyOpHOCoMGEQ==\"},{\"node\":{\"url\":\"https://github.com/BluBracket/server\",\"collaborators\":{\"edges\":[{\"node\":{\"login\":\"turtlecoder\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"duneja\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"malikoth\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"pgerlich\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"},{\"permission\":\"WRITE\"},{\"permission\":\"WRITE\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"benchstr\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"vineetks\",\"email\":\"vineetkr.999@gmail.com\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"haribhansingh2011\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"prakashlinga\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"vladimir-buzuev\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"alexblu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"srinivasakartheek\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"hendrik-yeh\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"nehalagrawal-blu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"arnob93\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"paymanblu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]}]}},\"cursor\":\"Y3Vyc29yOnYyOpHOCoMlGA==\"},{\"node\":{\"url\":\"https://github.com/BluBracket/releases\",\"collaborators\":{\"edges\":[{\"node\":{\"login\":\"turtlecoder\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"duneja\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"malikoth\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"pgerlich\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"benchstr\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"vineetks\",\"email\":\"vineetkr.999@gmail.com\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"haribhansingh2011\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"prakashlinga\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"vladimir-buzuev\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"alexblu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"srinivasakartheek\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"hendrik-yeh\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"nehalagrawal-blu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"arnob93\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"paymanblu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]}]}},\"cursor\":\"Y3Vyc29yOnYyOpHOCwsfkA==\"},{\"node\":{\"url\":\"https://github.com/BluBracket/analyzer\",\"collaborators\":{\"edges\":[{\"node\":{\"login\":\"turtlecoder\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"duneja\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"malikoth\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"pgerlich\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"benchstr\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"vineetks\",\"email\":\"vineetkr.999@gmail.com\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"haribhansingh2011\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"prakashlinga\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"vladimir-buzuev\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"alexblu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"srinivasakartheek\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"hendrik-yeh\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"nehalagrawal-blu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"arnob93\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"paymanblu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]}]}},\"cursor\":\"Y3Vyc29yOnYyOpHOC04tJQ==\"},{\"node\":{\"url\":\"https://github.com/BluBracket/deploy\",\"collaborators\":{\"edges\":[{\"node\":{\"login\":\"turtlecoder\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"duneja\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"malikoth\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"pgerlich\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"benchstr\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"vineetks\",\"email\":\"vineetkr.999@gmail.com\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"haribhansingh2011\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"prakashlinga\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"WRITE\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"vladimir-buzuev\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]},{\"node\":{\"login\":\"alexblu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"srinivasakartheek\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"},{\"permission\":\"WRITE\"}]},{\"node\":{\"login\":\"hendrik-yeh\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"nehalagrawal-blu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"arnob93\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"READ\"}]},{\"node\":{\"login\":\"paymanblu\",\"email\":\"\"},\"permissionSources\":[{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"},{\"permission\":\"ADMIN\"}]}]}},\"cursor\":\"Y3Vyc29yOnYyOpHOC1RGQA==\"}]}}}}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "qx7loqrogd5672idf",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-git-gateway-95c9db96b-swg2s",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:07.873955633Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:10.598386548Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:05,785 level=INFO module=RepoInterface:call_repo_provider msg=\"Calling repo API at URL https://api.github.com/graphql with method POST with payload b'{\"query\": \"\\\\n            query {\\\\n                organization(login: \\\\\"blubracket\\\\\") {\\\\n                    repositories(first: 100) {\\\\n                        edges {\\\\n                            node {\\\\n                                url\\\\n                                collaborators {\\\\n                                    edges {\\\\n                                        node {\\\\n                                            login\\\\n                                            email\\\\n                                        }\\\\n                                        permissionSources {\\\\n                                            permission\\\\n                                        }\\\\n                                    }\\\\n                                }\\\\n                            }\\\\n                            cursor\\\\n                        }\\\\n                    }\\\\n                }\\\\n            }\\\\n            \"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "qx7loqrogd5672hwh",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-git-gateway-95c9db96b-swg2s",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:05.785736679Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:10.598386548Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:03,572 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"vladimir-buzuev\",\"id\":44682889,\"node_id\":\"MDQ6VXNlcjQ0NjgyODg5\",\"avatar_url\":\"https://avatars0.githubusercontent.com/u/44682889?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/vladimir-buzuev\",\"html_url\":\"https://github.com/vladimir-buzuev\",\"followers_url\":\"https://api.github.com/users/vladimir-buzuev/followers\",\"following_url\":\"https://api.github.com/users/vladimir-buzuev/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/vladimir-buzuev/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/vladimir-buzuev/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/vladimir-buzuev/subscriptions\",\"organizations_url\":\"https://api.github.com/users/vladimir-buzuev/orgs\",\"repos_url\":\"https://api.github.com/users/vladimir-buzuev/repos\",\"events_url\":\"https://api.github.com/users/vladimir-buzuev/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/vladimir-buzuev/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":\"Vladimir Buzuev\",\"company\":null,\"blog\":\"\",\"location\":null,\"email\":null,\"hireable\":null,\"bio\":null,\"public_repos\":3,\"public_gists\":0,\"followers\":0,\"following\":0,\"created_at\":\"2018-11-01T19:41:55Z\",\"updated_at\":\"2020-01-14T16:02:24Z\"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui95",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:03.572721185Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:03,459 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"vineetks\",\"id\":12641493,\"node_id\":\"MDQ6VXNlcjEyNjQxNDkz\",\"avatar_url\":\"https://avatars0.githubusercontent.com/u/12641493?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/vineetks\",\"html_url\":\"https://github.com/vineetks\",\"followers_url\":\"https://api.github.com/users/vineetks/followers\",\"following_url\":\"https://api.github.com/users/vineetks/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/vineetks/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/vineetks/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/vineetks/subscriptions\",\"organizations_url\":\"https://api.github.com/users/vineetks/orgs\",\"repos_url\":\"https://api.github.com/users/vineetks/repos\",\"events_url\":\"https://api.github.com/users/vineetks/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/vineetks/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":\"Vineet Kumar Singh\",\"company\":\"BeeHyv Software Solutions\",\"blog\":\"\",\"location\":\"Hyderabad\",\"email\":\"vineetkr.999@gmail.com\",\"hireable\":null,\"bio\":null,\"public_repos\":4,\"public_gists\":0,\"followers\":0,\"following\":0,\"created_at\":\"2015-05-28T10:13:53Z\",\"updated_at\":\"2019-12-21T18:46:00Z\"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui92",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:03.459417710Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:03,269 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"turtlecoder\",\"id\":1462745,\"node_id\":\"MDQ6VXNlcjE0NjI3NDU=\",\"avatar_url\":\"https://avatars2.githubusercontent.com/u/1462745?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/turtlecoder\",\"html_url\":\"https://github.com/turtlecoder\",\"followers_url\":\"https://api.github.com/users/turtlecoder/followers\",\"following_url\":\"https://api.github.com/users/turtlecoder/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/turtlecoder/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/turtlecoder/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/turtlecoder/subscriptions\",\"organizations_url\":\"https://api.github.com/users/turtlecoder/orgs\",\"repos_url\":\"https://api.github.com/users/turtlecoder/repos\",\"events_url\":\"https://api.github.com/users/turtlecoder/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/turtlecoder/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":\"Haroon Khan\",\"company\":null,\"blog\":\"bybitsandbytes.com\",\"location\":\"Silicon Valley\",\"email\":null,\"hireable\":true,\"bio\":null,\"public_repos\":41,\"public_gists\":0,\"followers\":1,\"following\":0,\"created_at\":\"2012-02-22T20:06:19Z\",\"updated_at\":\"2019-11-30T18:23:31Z\"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui90",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:03.269779319Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:03,145 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"srinivasakartheek\",\"id\":50820829,\"node_id\":\"MDQ6VXNlcjUwODIwODI5\",\"avatar_url\":\"https://avatars3.githubusercontent.com/u/50820829?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/srinivasakartheek\",\"html_url\":\"https://github.com/srinivasakartheek\",\"followers_url\":\"https://api.github.com/users/srinivasakartheek/followers\",\"following_url\":\"https://api.github.com/users/srinivasakartheek/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/srinivasakartheek/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/srinivasakartheek/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/srinivasakartheek/subscriptions\",\"organizations_url\":\"https://api.github.com/users/srinivasakartheek/orgs\",\"repos_url\":\"https://api.github.com/users/srinivasakartheek/repos\",\"events_url\":\"https://api.github.com/users/srinivasakartheek/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/srinivasakartheek/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":\"Srinivasa Kartheek\",\"company\":null,\"blog\":\"\",\"location\":null,\"email\":null,\"hireable\":null,\"bio\":null,\"public_repos\":0,\"public_gists\":0,\"followers\":0,\"following\":0,\"created_at\":\"2019-05-20T06:43:10Z\",\"updated_at\":\"2020-01-05T16:22:56Z\"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui88",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:03.145574123Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:03,038 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"prakashlinga\",\"id\":44483366,\"node_id\":\"MDQ6VXNlcjQ0NDgzMzY2\",\"avatar_url\":\"https://avatars0.githubusercontent.com/u/44483366?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/prakashlinga\",\"html_url\":\"https://github.com/prakashlinga\",\"followers_url\":\"https://api.github.com/users/prakashlinga/followers\",\"following_url\":\"https://api.github.com/users/prakashlinga/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/prakashlinga/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/prakashlinga/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/prakashlinga/subscriptions\",\"organizations_url\":\"https://api.github.com/users/prakashlinga/orgs\",\"repos_url\":\"https://api.github.com/users/prakashlinga/repos\",\"events_url\":\"https://api.github.com/users/prakashlinga/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/prakashlinga/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":null,\"company\":null,\"blog\":\"\",\"location\":null,\"email\":null,\"hireable\":null,\"bio\":null,\"public_repos\":1,\"public_gists\":0,\"followers\":0,\"following\":0,\"created_at\":\"2018-10-25T22:38:50Z\",\"updated_at\":\"2020-01-13T04:38:59Z\"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui86",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:03.038737823Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:02,932 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"pgerlich\",\"id\":6577758,\"node_id\":\"MDQ6VXNlcjY1Nzc3NTg=\",\"avatar_url\":\"https://avatars0.githubusercontent.com/u/6577758?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/pgerlich\",\"html_url\":\"https://github.com/pgerlich\",\"followers_url\":\"https://api.github.com/users/pgerlich/followers\",\"following_url\":\"https://api.github.com/users/pgerlich/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/pgerlich/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/pgerlich/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/pgerlich/subscriptions\",\"organizations_url\":\"https://api.github.com/users/pgerlich/orgs\",\"repos_url\":\"https://api.github.com/users/pgerlich/repos\",\"events_url\":\"https://api.github.com/users/pgerlich/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/pgerlich/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":\"Paul Gerlich\",\"company\":\"@BluBracket \",\"blog\":\"gerlich.io\",\"location\":\"Bettendorf, IA\",\"email\":null,\"hireable\":true,\"bio\":null,\"public_repos\":35,\"public_gists\":0,\"followers\":6,\"following\":7,\"created_at\":\"2014-02-03T18:47:30Z\",\"updated_at\":\"2020-01-13T19:13:19Z\"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui35",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:02.933338301Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:02,841 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"paymanblu\",\"id\":56666294,\"node_id\":\"MDQ6VXNlcjU2NjY2Mjk0\",\"avatar_url\":\"https://avatars0.githubusercontent.com/u/56666294?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/paymanblu\",\"html_url\":\"https://github.com/paymanblu\",\"followers_url\":\"https://api.github.com/users/paymanblu/followers\",\"following_url\":\"https://api.github.com/users/paymanblu/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/paymanblu/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/paymanblu/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/paymanblu/subscriptions\",\"organizations_url\":\"https://api.github.com/users/paymanblu/orgs\",\"repos_url\":\"https://api.github.com/users/paymanblu/repos\",\"events_url\":\"https://api.github.com/users/paymanblu/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/paymanblu/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":null,\"company\":null,\"blog\":\"\",\"location\":null,\"email\":null,\"hireable\":null,\"bio\":null,\"public_repos\":0,\"public_gists\":0,\"followers\":0,\"following\":0,\"created_at\":\"2019-10-17T04:24:04Z\",\"updated_at\":\"2020-01-14T18:49:39Z\",\"private_gists\":0,\"total_private_repos\":0,\"owned_private_repos\":0,\"disk_usage\":0,\"collaborators\":0,\"two_factor_authentication\":true,\"plan\":{\"name\":\"free\",\"space\":976562499,\"collaborators\":0,\"private_repos\":10000}}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui33",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln",
+        "cluster_name": "blubracket-prod-us-central1-cluster"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:02.842426275Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:02,721 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"nehalagrawal-blu\",\"id\":52674054,\"node_id\":\"MDQ6VXNlcjUyNjc0MDU0\",\"avatar_url\":\"https://avatars2.githubusercontent.com/u/52674054?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/nehalagrawal-blu\",\"html_url\":\"https://github.com/nehalagrawal-blu\",\"followers_url\":\"https://api.github.com/users/nehalagrawal-blu/followers\",\"following_url\":\"https://api.github.com/users/nehalagrawal-blu/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/nehalagrawal-blu/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/nehalagrawal-blu/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/nehalagrawal-blu/subscriptions\",\"organizations_url\":\"https://api.github.com/users/nehalagrawal-blu/orgs\",\"repos_url\":\"https://api.github.com/users/nehalagrawal-blu/repos\",\"events_url\":\"https://api.github.com/users/nehalagrawal-blu/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/nehalagrawal-blu/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":\"Nehal Agrawal\",\"company\":\"BluBracket Inc.\",\"blog\":\"\",\"location\":\"Palo Alto, CA, USA\",\"email\":null,\"hireable\":null,\"bio\":null,\"public_repos\":1,\"public_gists\":0,\"followers\":0,\"following\":0,\"created_at\":\"2019-07-08T17:47:05Z\",\"updated_at\":\"2020-01-06T22:18:33Z\"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui31",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:02.721699547Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:02,608 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"malikoth\",\"id\":2665937,\"node_id\":\"MDQ6VXNlcjI2NjU5Mzc=\",\"avatar_url\":\"https://avatars2.githubusercontent.com/u/2665937?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/malikoth\",\"html_url\":\"https://github.com/malikoth\",\"followers_url\":\"https://api.github.com/users/malikoth/followers\",\"following_url\":\"https://api.github.com/users/malikoth/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/malikoth/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/malikoth/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/malikoth/subscriptions\",\"organizations_url\":\"https://api.github.com/users/malikoth/orgs\",\"repos_url\":\"https://api.github.com/users/malikoth/repos\",\"events_url\":\"https://api.github.com/users/malikoth/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/malikoth/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":\"Kyle Rich\",\"company\":null,\"blog\":\"\",\"location\":\"Salt Lake City, UT\",\"email\":null,\"hireable\":null,\"bio\":null,\"public_repos\":6,\"public_gists\":0,\"followers\":3,\"following\":3,\"created_at\":\"2012-10-27T22:14:29Z\",\"updated_at\":\"2020-01-13T19:05:00Z\"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui29",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln",
+        "cluster_name": "blubracket-prod-us-central1-cluster"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:02.609137382Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:02,362 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"hendrik-yeh\",\"id\":50842554,\"node_id\":\"MDQ6VXNlcjUwODQyNTU0\",\"avatar_url\":\"https://avatars1.githubusercontent.com/u/50842554?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/hendrik-yeh\",\"html_url\":\"https://github.com/hendrik-yeh\",\"followers_url\":\"https://api.github.com/users/hendrik-yeh/followers\",\"following_url\":\"https://api.github.com/users/hendrik-yeh/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/hendrik-yeh/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/hendrik-yeh/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/hendrik-yeh/subscriptions\",\"organizations_url\":\"https://api.github.com/users/hendrik-yeh/orgs\",\"repos_url\":\"https://api.github.com/users/hendrik-yeh/repos\",\"events_url\":\"https://api.github.com/users/hendrik-yeh/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/hendrik-yeh/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":\"Hendrik Yeh\",\"company\":null,\"blog\":\"\",\"location\":null,\"email\":null,\"hireable\":null,\"bio\":null,\"public_repos\":1,\"public_gists\":0,\"followers\":2,\"following\":0,\"created_at\":\"2019-05-20T17:36:56Z\",\"updated_at\":\"2020-01-13T01:09:14Z\"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui27",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln",
+        "container_name": "server"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:02.362747566Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:02,257 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"haribhansingh2011\",\"id\":24893639,\"node_id\":\"MDQ6VXNlcjI0ODkzNjM5\",\"avatar_url\":\"https://avatars0.githubusercontent.com/u/24893639?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/haribhansingh2011\",\"html_url\":\"https://github.com/haribhansingh2011\",\"followers_url\":\"https://api.github.com/users/haribhansingh2011/followers\",\"following_url\":\"https://api.github.com/users/haribhansingh2011/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/haribhansingh2011/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/haribhansingh2011/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/haribhansingh2011/subscriptions\",\"organizations_url\":\"https://api.github.com/users/haribhansingh2011/orgs\",\"repos_url\":\"https://api.github.com/users/haribhansingh2011/repos\",\"events_url\":\"https://api.github.com/users/haribhansingh2011/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/haribhansingh2011/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":null,\"company\":null,\"blog\":\"\",\"location\":null,\"email\":null,\"hireable\":null,\"bio\":null,\"public_repos\":0,\"public_gists\":0,\"followers\":0,\"following\":0,\"created_at\":\"2017-01-03T12:24:35Z\",\"updated_at\":\"2020-01-10T09:34:31Z\"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui25",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:02.257697939Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:02,083 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"duneja\",\"id\":2328751,\"node_id\":\"MDQ6VXNlcjIzMjg3NTE=\",\"avatar_url\":\"https://avatars3.githubusercontent.com/u/2328751?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/duneja\",\"html_url\":\"https://github.com/duneja\",\"followers_url\":\"https://api.github.com/users/duneja/followers\",\"following_url\":\"https://api.github.com/users/duneja/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/duneja/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/duneja/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/duneja/subscriptions\",\"organizations_url\":\"https://api.github.com/users/duneja/orgs\",\"repos_url\":\"https://api.github.com/users/duneja/repos\",\"events_url\":\"https://api.github.com/users/duneja/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/duneja/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":null,\"company\":null,\"blog\":\"\",\"location\":null,\"email\":null,\"hireable\":null,\"bio\":null,\"public_repos\":1,\"public_gists\":0,\"followers\":0,\"following\":0,\"created_at\":\"2012-09-12T02:42:09Z\",\"updated_at\":\"2020-01-08T02:38:28Z\"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui23",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:02.084116393Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:01,974 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"benchstr\",\"id\":8271435,\"node_id\":\"MDQ6VXNlcjgyNzE0MzU=\",\"avatar_url\":\"https://avatars1.githubusercontent.com/u/8271435?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/benchstr\",\"html_url\":\"https://github.com/benchstr\",\"followers_url\":\"https://api.github.com/users/benchstr/followers\",\"following_url\":\"https://api.github.com/users/benchstr/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/benchstr/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/benchstr/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/benchstr/subscriptions\",\"organizations_url\":\"https://api.github.com/users/benchstr/orgs\",\"repos_url\":\"https://api.github.com/users/benchstr/repos\",\"events_url\":\"https://api.github.com/users/benchstr/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/benchstr/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":\"Ben!\",\"company\":null,\"blog\":\"\",\"location\":null,\"email\":null,\"hireable\":null,\"bio\":null,\"public_repos\":1,\"public_gists\":0,\"followers\":0,\"following\":0,\"created_at\":\"2014-07-25T22:15:46Z\",\"updated_at\":\"2020-01-14T01:20:23Z\"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui21",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:01.974528686Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:01,840 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"arnob93\",\"id\":54996648,\"node_id\":\"MDQ6VXNlcjU0OTk2NjQ4\",\"avatar_url\":\"https://avatars1.githubusercontent.com/u/54996648?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/arnob93\",\"html_url\":\"https://github.com/arnob93\",\"followers_url\":\"https://api.github.com/users/arnob93/followers\",\"following_url\":\"https://api.github.com/users/arnob93/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/arnob93/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/arnob93/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/arnob93/subscriptions\",\"organizations_url\":\"https://api.github.com/users/arnob93/orgs\",\"repos_url\":\"https://api.github.com/users/arnob93/repos\",\"events_url\":\"https://api.github.com/users/arnob93/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/arnob93/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":\"Arnob Barai\",\"company\":null,\"blog\":\"\",\"location\":null,\"email\":null,\"hireable\":null,\"bio\":null,\"public_repos\":1,\"public_gists\":0,\"followers\":0,\"following\":0,\"created_at\":\"2019-09-06T17:00:08Z\",\"updated_at\":\"2020-01-14T18:05:28Z\"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui19",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln",
+        "container_name": "server",
+        "namespace_name": "blubracket"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:01.841341676Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "95c9db96b"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 18:51:01,683 level=INFO module=RepoInterface:call_repo_provider msg=\"Got response from repo API code = 200, body = b'{\"login\":\"alexblu\",\"id\":48729557,\"node_id\":\"MDQ6VXNlcjQ4NzI5NTU3\",\"avatar_url\":\"https://avatars2.githubusercontent.com/u/48729557?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/alexblu\",\"html_url\":\"https://github.com/alexblu\",\"followers_url\":\"https://api.github.com/users/alexblu/followers\",\"following_url\":\"https://api.github.com/users/alexblu/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/alexblu/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/alexblu/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/alexblu/subscriptions\",\"organizations_url\":\"https://api.github.com/users/alexblu/orgs\",\"repos_url\":\"https://api.github.com/users/alexblu/repos\",\"events_url\":\"https://api.github.com/users/alexblu/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/alexblu/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":null,\"company\":null,\"blog\":\"\",\"location\":null,\"email\":null,\"hireable\":null,\"bio\":null,\"public_repos\":0,\"public_gists\":0,\"followers\":0,\"following\":0,\"created_at\":\"2019-03-19T17:06:20Z\",\"updated_at\":\"2019-12-29T03:40:44Z\"}'\" request_id=76e8bf7ff585ca8fcedc0155561c5d34 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=Internal host=ingress-nginx-blubracket.ingress-nginx protocol=http user_agent=\"Mozilla/5.0 (compatible; pycurl)\"\n",
+    "insertId": "rht6zdt7qkc6kui17",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T18:51:01.683816782Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T18:51:06.037125801Z"
+  },
+  {
+    "textPayload": "76.126.39.70 - [76.126.39.70] - - [14/Jan/2020:16:25:38 +0000] \"GET /api/auth/reset?email=ben@blubracket.com HTTP/1.1\" 200 331 \"https://blubracket.blubracket.com/forgot-password\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" 652 0.016 [blubracket-blubracket-server-8888] [] 192.168.0.71:8888 384 0.016 200 9b68aa1f2c82da1f236247bb107673e3\n",
+    "insertId": "rht6zdt7qkc6krl17",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "namespace_name": "ingress-nginx",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "pod_name": "nginx-ingress-controller-blubracket-77b5df7dbc-lbzw7",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "nginx-ingress-controller"
+      }
+    },
+    "timestamp": "2020-01-14T16:25:38.984071074Z",
+    "severity": "INFO",
+    "labels": {
+      "k8s-pod/pod-template-hash": "77b5df7dbc",
+      "k8s-pod/environment": "blubracket",
+      "k8s-pod/app_kubernetes_io/name": "ingress-nginx",
+      "k8s-pod/app_kubernetes_io/part-of": "ingress-nginx"
+    },
+    "logName": "projects/prod-262319/logs/stdout",
+    "receiveTimestamp": "2020-01-14T16:25:40.391755990Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 16:25:38,983 level=INFO module=Application:log_request msg=\"GET /api/auth/reset?email=ben@blubracket.com (192.168.0.67)\" code=\"200\" request_time=\"14.822006225585938\" request_id=9b68aa1f2c82da1f236247bb107673e3 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=None host=blubracket.blubracket.com protocol=http user_agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\"\n",
+    "insertId": "rht6zdt7qkc6krl19",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-server-74b847bf96-mz45m",
+        "cluster_name": "blubracket-prod-us-central1-cluster"
+      }
+    },
+    "timestamp": "2020-01-14T16:25:38.983813940Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "74b847bf96",
+      "k8s-pod/role": "server",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T16:25:40.391755990Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 16:25:38,969 level=INFO module=HandlerBase:prepare msg=\"GET /api/auth/reset?email=ben@blubracket.com (192.168.0.67)\" Host=\"blubracket.blubracket.com\" X-Request-Id=\"9b68aa1f2c82da1f236247bb107673e3\" X-Real-Ip=\"76.126.39.70\" X-Forwarded-For=\"76.126.39.70\" X-Forwarded-Host=\"blubracket.blubracket.com\" X-Forwarded-Port=\"80\" X-Forwarded-Proto=\"https\" X-Original-Uri=\"/api/auth/reset?email=ben@blubracket.com\" X-Scheme=\"https\" X-Original-Forwarded-For=\"76.126.39.70, 34.107.153.158\" User-Agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" Accept=\"application/json, text/plain, */*\" Accept-Language=\"en-US,en;q=0.5\" Accept-Encoding=\"gzip, deflate, br\" Referer=\"https://blubracket.blubracket.com/forgot-password\" Cookie=\"_ga=GA1.2.1157152124.1578528527; _gid=GA1.2.1086207814.1578936936; _gat_gtag_UA_150268244_1=1\" X-Cloud-Trace-Context=\"42e17c3735e135404869f45f4d01f270/4066135105081277366\" Via=\"1.1 google\" request_id=None tenant=None tenant_id=None user=None host=None protocol=None user_agent=\"None\"\n",
+    "insertId": "rht6zdt7qkc6krl18",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-server-74b847bf96-mz45m",
+        "container_name": "server",
+        "namespace_name": "blubracket"
+      }
+    },
+    "timestamp": "2020-01-14T16:25:38.969710443Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "74b847bf96",
+      "k8s-pod/role": "server",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T16:25:40.391755990Z"
+  },
+  {
+    "textPayload": "173.164.202.94 - [173.164.202.94] - - [14/Jan/2020:03:14:10 +0000] \"GET /api/auth/reset?email=ben@blubracket.com HTTP/1.1\" 200 329 \"https://blubracket.blubracket.com/forgot-password?email=ben@blubracket.com\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" 679 0.013 [blubracket-blubracket-server-8888] [] 192.168.0.71:8888 384 0.012 200 d3db59ae1ed27eb3a7ca1a80e5581a82\n",
+    "insertId": "rht6zdt7qkc6kck67",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "pod_name": "nginx-ingress-controller-blubracket-77b5df7dbc-lbzw7",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "nginx-ingress-controller",
+        "namespace_name": "ingress-nginx",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T03:14:10.126296271Z",
+    "severity": "INFO",
+    "labels": {
+      "k8s-pod/app_kubernetes_io/part-of": "ingress-nginx",
+      "k8s-pod/pod-template-hash": "77b5df7dbc",
+      "k8s-pod/environment": "blubracket",
+      "k8s-pod/app_kubernetes_io/name": "ingress-nginx"
+    },
+    "logName": "projects/prod-262319/logs/stdout",
+    "receiveTimestamp": "2020-01-14T03:14:13.428366745Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 03:14:10,125 level=INFO module=Application:log_request msg=\"GET /api/auth/reset?email=ben@blubracket.com (192.168.0.67)\" code=\"200\" request_time=\"11.904478073120117\" request_id=d3db59ae1ed27eb3a7ca1a80e5581a82 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=None host=blubracket.blubracket.com protocol=http user_agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\"\n",
+    "insertId": "rht6zdt7qkc6kck69",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-server-74b847bf96-mz45m",
+        "container_name": "server",
+        "namespace_name": "blubracket"
+      }
+    },
+    "timestamp": "2020-01-14T03:14:10.126270231Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "74b847bf96",
+      "k8s-pod/role": "server",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T03:14:13.428366745Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 03:14:10,114 level=INFO module=HandlerBase:prepare msg=\"GET /api/auth/reset?email=ben@blubracket.com (192.168.0.67)\" Host=\"blubracket.blubracket.com\" X-Request-Id=\"d3db59ae1ed27eb3a7ca1a80e5581a82\" X-Real-Ip=\"173.164.202.94\" X-Forwarded-For=\"173.164.202.94\" X-Forwarded-Host=\"blubracket.blubracket.com\" X-Forwarded-Port=\"80\" X-Forwarded-Proto=\"https\" X-Original-Uri=\"/api/auth/reset?email=ben@blubracket.com\" X-Scheme=\"https\" X-Original-Forwarded-For=\"173.164.202.94, 34.107.153.158\" User-Agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" Accept=\"application/json, text/plain, */*\" Accept-Language=\"en-US,en;q=0.5\" Accept-Encoding=\"gzip, deflate, br\" Referer=\"https://blubracket.blubracket.com/forgot-password?email=ben@blubracket.com\" Cookie=\"_ga=GA1.2.1157152124.1578528527; _gid=GA1.2.1086207814.1578936936; _gat_gtag_UA_150268244_1=1\" X-Cloud-Trace-Context=\"61fdf7e0714ab091db874bde507150b1/2757314390477221086\" Via=\"1.1 google\" request_id=None tenant=None tenant_id=None user=None host=None protocol=None user_agent=\"None\"\n",
+    "insertId": "rht6zdt7qkc6kck68",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-server-74b847bf96-mz45m",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T03:14:10.114653181Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "74b847bf96",
+      "k8s-pod/role": "server",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T03:14:13.428366745Z"
+  },
+  {
+    "textPayload": "173.164.202.94 - [173.164.202.94] - - [14/Jan/2020:03:14:06 +0000] \"GET /static/media/back-arrow.e71c0066.svg HTTP/1.1\" 200 235 \"https://blubracket.blubracket.com/forgot-password?email=ben@blubracket.com\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" 657 0.001 [blubracket-blubracket-portal-80] [] 192.168.0.35:80 265 0.001 200 604db3b3cbafac43726b80723c0da23b\n",
+    "insertId": "rht6zdt7qkc6kck61",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "nginx-ingress-controller-blubracket-77b5df7dbc-lbzw7",
+        "container_name": "nginx-ingress-controller",
+        "namespace_name": "ingress-nginx",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T03:14:06.262972902Z",
+    "severity": "INFO",
+    "labels": {
+      "k8s-pod/app_kubernetes_io/name": "ingress-nginx",
+      "k8s-pod/app_kubernetes_io/part-of": "ingress-nginx",
+      "k8s-pod/pod-template-hash": "77b5df7dbc",
+      "k8s-pod/environment": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stdout",
+    "receiveTimestamp": "2020-01-14T03:14:08.338930295Z"
+  },
+  {
+    "textPayload": "192.168.0.67 - - [14/Jan/2020:03:14:06 +0000] \"GET /static/media/back-arrow.e71c0066.svg HTTP/1.1\" 200 265 \"https://blubracket.blubracket.com/forgot-password?email=ben@blubracket.com\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\"\n",
+    "insertId": "qx7loqrogd5669pcy",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-portal-b5ff56b77-kpgqq",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "portal",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T03:14:06.262370153Z",
+    "severity": "INFO",
+    "labels": {
+      "k8s-pod/pod-template-hash": "b5ff56b77",
+      "k8s-pod/role": "portal",
+      "k8s-pod/tier": "frontend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stdout",
+    "receiveTimestamp": "2020-01-14T03:14:10.688217250Z"
+  },
+  {
+    "textPayload": "173.164.202.94 - [173.164.202.94] - - [14/Jan/2020:01:08:45 +0000] \"GET /api/auth/reset?email=ben@blubracket.com HTTP/1.1\" 200 330 \"https://blubracket.blubracket.com/forgot-password\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" 687 0.029 [blubracket-blubracket-server-8888] [] 192.168.0.71:8888 384 0.029 200 51d3fc44c7cde7e362506d9699c1bb68\n",
+    "insertId": "qx7loqrogd5669fik",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "namespace_name": "ingress-nginx",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "pod_name": "nginx-ingress-controller-blubracket-77b5df7dbc-q8qpp",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "nginx-ingress-controller"
+      }
+    },
+    "timestamp": "2020-01-14T01:08:45.624684707Z",
+    "severity": "INFO",
+    "labels": {
+      "k8s-pod/pod-template-hash": "77b5df7dbc",
+      "k8s-pod/environment": "blubracket",
+      "k8s-pod/app_kubernetes_io/name": "ingress-nginx",
+      "k8s-pod/app_kubernetes_io/part-of": "ingress-nginx"
+    },
+    "logName": "projects/prod-262319/logs/stdout",
+    "receiveTimestamp": "2020-01-14T01:08:47.897459380Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 01:08:45,624 level=INFO module=Application:log_request msg=\"GET /api/auth/reset?email=ben@blubracket.com (192.168.0.36)\" code=\"200\" request_time=\"25.56610107421875\" request_id=51d3fc44c7cde7e362506d9699c1bb68 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=None host=blubracket.blubracket.com protocol=http user_agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\"\n",
+    "insertId": "rht6zdt7qkc6jzy68",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-server-74b847bf96-mz45m",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server"
+      }
+    },
+    "timestamp": "2020-01-14T01:08:45.624538098Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "74b847bf96",
+      "k8s-pod/role": "server",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T01:08:49.316910138Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 01:08:45,599 level=INFO module=HandlerBase:prepare msg=\"GET /api/auth/reset?email=ben@blubracket.com (192.168.0.36)\" Host=\"blubracket.blubracket.com\" X-Request-Id=\"51d3fc44c7cde7e362506d9699c1bb68\" X-Real-Ip=\"173.164.202.94\" X-Forwarded-For=\"173.164.202.94\" X-Forwarded-Host=\"blubracket.blubracket.com\" X-Forwarded-Port=\"80\" X-Forwarded-Proto=\"https\" X-Original-Uri=\"/api/auth/reset?email=ben@blubracket.com\" X-Scheme=\"https\" X-Original-Forwarded-For=\"173.164.202.94, 34.107.153.158\" User-Agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" Accept=\"application/json, text/plain, */*\" Accept-Language=\"en-US,en;q=0.5\" Accept-Encoding=\"gzip, deflate, br\" Referer=\"https://blubracket.blubracket.com/forgot-password\" Cookie=\"_ga=GA1.2.1157152124.1578528527; _gid=GA1.2.1086207814.1578936936\" If-None-Match=\"W/\"a2c91cc4d06c66ae50bd659d27b996d539be159e\"\" X-Cloud-Trace-Context=\"21fb099dcb8e080e74c8913a566f08bc/1251896639856232359\" Via=\"1.1 google\" request_id=None tenant=None tenant_id=None user=None host=None protocol=None user_agent=\"None\"\n",
+    "insertId": "rht6zdt7qkc6jzy64",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-server-74b847bf96-mz45m"
+      }
+    },
+    "timestamp": "2020-01-14T01:08:45.599395186Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "74b847bf96",
+      "k8s-pod/role": "server",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T01:08:49.316910138Z"
+  },
+  {
+    "textPayload": "173.164.202.94 - [173.164.202.94] - - [14/Jan/2020:01:03:48 +0000] \"GET /api/auth/reset?email=ben@blubracket.com HTTP/1.1\" 200 348 \"https://blubracket.blubracket.com/check-email?email=payman@blubracket.com\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" 679 0.014 [blubracket-blubracket-server-8888] [] 192.168.0.38:8888 379 0.014 200 6eea1ea850e6df1e70699dc1cd1bc0b5\n",
+    "insertId": "rht6zdt7qkc6jzw11",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "nginx-ingress-controller-blubracket-77b5df7dbc-lbzw7",
+        "container_name": "nginx-ingress-controller",
+        "namespace_name": "ingress-nginx",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T01:03:48.580864776Z",
+    "severity": "INFO",
+    "labels": {
+      "k8s-pod/pod-template-hash": "77b5df7dbc",
+      "k8s-pod/environment": "blubracket",
+      "k8s-pod/app_kubernetes_io/name": "ingress-nginx",
+      "k8s-pod/app_kubernetes_io/part-of": "ingress-nginx"
+    },
+    "logName": "projects/prod-262319/logs/stdout",
+    "receiveTimestamp": "2020-01-14T01:03:54.831403205Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 01:03:48,580 level=INFO module=Application:log_request msg=\"GET /api/auth/reset?email=ben@blubracket.com (192.168.0.67)\" code=\"200\" request_time=\"11.53421401977539\" request_id=6eea1ea850e6df1e70699dc1cd1bc0b5 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=None host=blubracket.blubracket.com protocol=http user_agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\"\n",
+    "insertId": "qx7loqrogd5669eym",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-server-74b847bf96-56c66",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server"
+      }
+    },
+    "timestamp": "2020-01-14T01:03:48.580619136Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/role": "server",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "74b847bf96"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T01:03:55.296215777Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 01:03:48,569 level=INFO module=HandlerBase:prepare msg=\"GET /api/auth/reset?email=ben@blubracket.com (192.168.0.67)\" Host=\"blubracket.blubracket.com\" X-Request-Id=\"6eea1ea850e6df1e70699dc1cd1bc0b5\" X-Real-Ip=\"173.164.202.94\" X-Forwarded-For=\"173.164.202.94\" X-Forwarded-Host=\"blubracket.blubracket.com\" X-Forwarded-Port=\"80\" X-Forwarded-Proto=\"https\" X-Original-Uri=\"/api/auth/reset?email=ben@blubracket.com\" X-Scheme=\"https\" X-Original-Forwarded-For=\"173.164.202.94, 34.107.153.158\" User-Agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" Accept=\"application/json, text/plain, */*\" Accept-Language=\"en-US,en;q=0.5\" Accept-Encoding=\"gzip, deflate, br\" Referer=\"https://blubracket.blubracket.com/check-email?email=payman@blubracket.com\" Cookie=\"_ga=GA1.2.1157152124.1578528527; _gid=GA1.2.1086207814.1578936936; _gat_gtag_UA_150268244_1=1\" X-Cloud-Trace-Context=\"763c9fdfc06bc8a080efbd6a0bdd533c/13177097838685231425\" Via=\"1.1 google\" request_id=None tenant=None tenant_id=None user=None host=None protocol=None user_agent=\"None\"\n",
+    "insertId": "qx7loqrogd5669eyl",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-server-74b847bf96-56c66",
+        "cluster_name": "blubracket-prod-us-central1-cluster"
+      }
+    },
+    "timestamp": "2020-01-14T01:03:48.569685394Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "74b847bf96",
+      "k8s-pod/role": "server",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T01:03:55.296215777Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 01:03:42,051 level=INFO module=Application:log_request msg=\"GET /api/auth/reset?email=payman@blubracket.com (192.168.0.67)\" code=\"500\" request_time=\"33.747196197509766\" request_id=0cee795f46e2def2c5638679126abd43 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=None host=blubracket.blubracket.com protocol=http user_agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\"\n",
+    "insertId": "rht6zdt7qkc6jzw04",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-server-74b847bf96-mz45m",
+        "container_name": "server",
+        "namespace_name": "blubracket"
+      }
+    },
+    "timestamp": "2020-01-14T01:03:42.051935397Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "74b847bf96",
+      "k8s-pod/role": "server",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T01:03:47.760402999Z"
+  },
+  {
+    "textPayload": "173.164.202.94 - [173.164.202.94] - - [14/Jan/2020:01:03:42 +0000] \"GET /api/auth/reset?email=payman@blubracket.com HTTP/1.1\" 500 57 \"https://blubracket.blubracket.com/forgot-password?email=ben@blubracket.com\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" 683 0.035 [blubracket-blubracket-server-8888] [] 192.168.0.71:8888 57 0.035 500 0cee795f46e2def2c5638679126abd43\n",
+    "insertId": "rht6zdt7qkc6jzw05",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "namespace_name": "ingress-nginx",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "pod_name": "nginx-ingress-controller-blubracket-77b5df7dbc-lbzw7",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "nginx-ingress-controller"
+      }
+    },
+    "timestamp": "2020-01-14T01:03:42.051852666Z",
+    "severity": "INFO",
+    "labels": {
+      "k8s-pod/pod-template-hash": "77b5df7dbc",
+      "k8s-pod/environment": "blubracket",
+      "k8s-pod/app_kubernetes_io/name": "ingress-nginx",
+      "k8s-pod/app_kubernetes_io/part-of": "ingress-nginx"
+    },
+    "logName": "projects/prod-262319/logs/stdout",
+    "receiveTimestamp": "2020-01-14T01:03:47.760402999Z"
+  },
+  {
+    "textPayload": "HTTPServerRequest(protocol='http', host='blubracket.blubracket.com', method='GET', uri='/api/auth/reset?email=payman@blubracket.com', version='HTTP/1.1', remote_ip='192.168.0.67')\n",
+    "insertId": "rht6zdt7qkc6jzw01",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-server-74b847bf96-mz45m",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319"
+      }
+    },
+    "timestamp": "2020-01-14T01:03:42.051118446Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "74b847bf96",
+      "k8s-pod/role": "server",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T01:03:47.760402999Z"
+  },
+  {
+    "textPayload": "ERROR:tornado.application:Uncaught exception GET /api/auth/reset?email=payman@blubracket.com (192.168.0.67)\n",
+    "insertId": "rht6zdt7qkc6jzw00",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-server-74b847bf96-mz45m",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319"
+      }
+    },
+    "timestamp": "2020-01-14T01:03:42.051005608Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "74b847bf96",
+      "k8s-pod/role": "server",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T01:03:47.760402999Z"
+  },
+  {
+    "textPayload": "time=2020-01-14 01:03:42,018 level=INFO module=HandlerBase:prepare msg=\"GET /api/auth/reset?email=payman@blubracket.com (192.168.0.67)\" Host=\"blubracket.blubracket.com\" X-Request-Id=\"0cee795f46e2def2c5638679126abd43\" X-Real-Ip=\"173.164.202.94\" X-Forwarded-For=\"173.164.202.94\" X-Forwarded-Host=\"blubracket.blubracket.com\" X-Forwarded-Port=\"80\" X-Forwarded-Proto=\"https\" X-Original-Uri=\"/api/auth/reset?email=payman@blubracket.com\" X-Scheme=\"https\" X-Original-Forwarded-For=\"173.164.202.94, 34.107.153.158\" User-Agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" Accept=\"application/json, text/plain, */*\" Accept-Language=\"en-US,en;q=0.5\" Accept-Encoding=\"gzip, deflate, br\" Referer=\"https://blubracket.blubracket.com/forgot-password?email=ben@blubracket.com\" Cookie=\"_ga=GA1.2.1157152124.1578528527; _gid=GA1.2.1086207814.1578936936; _gat_gtag_UA_150268244_1=1\" X-Cloud-Trace-Context=\"9f68a9805b1e9688fb3712a507eb57b7/16575216738473480006\" Via=\"1.1 google\" request_id=None tenant=None tenant_id=None user=None host=None protocol=None user_agent=\"None\"\n",
+    "insertId": "rht6zdt7qkc6jzv96",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-server-74b847bf96-mz45m",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-14T01:03:42.018452553Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "74b847bf96",
+      "k8s-pod/role": "server",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-14T01:03:47.760402999Z"
+  },
+  {
+    "textPayload": "173.164.202.94 - [173.164.202.94] - - [14/Jan/2020:01:03:30 +0000] \"GET /static/media/back-arrow.e71c0066.svg HTTP/1.1\" 200 245 \"https://blubracket.blubracket.com/forgot-password?email=ben@blubracket.com\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" 657 0.001 [blubracket-blubracket-portal-80] [] 192.168.0.66:80 265 0.002 200 33163ed7bcc20adb8402067654da19f0\n",
+    "insertId": "qx7loqrogd5669exv",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "container_name": "nginx-ingress-controller",
+        "namespace_name": "ingress-nginx",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "pod_name": "nginx-ingress-controller-blubracket-77b5df7dbc-q8qpp",
+        "cluster_name": "blubracket-prod-us-central1-cluster"
+      }
+    },
+    "timestamp": "2020-01-14T01:03:30.960348891Z",
+    "severity": "INFO",
+    "labels": {
+      "k8s-pod/pod-template-hash": "77b5df7dbc",
+      "k8s-pod/environment": "blubracket",
+      "k8s-pod/app_kubernetes_io/name": "ingress-nginx",
+      "k8s-pod/app_kubernetes_io/part-of": "ingress-nginx"
+    },
+    "logName": "projects/prod-262319/logs/stdout",
+    "receiveTimestamp": "2020-01-14T01:03:37.102728136Z"
+  },
+  {
+    "textPayload": "192.168.0.36 - - [14/Jan/2020:01:03:30 +0000] \"GET /static/media/back-arrow.e71c0066.svg HTTP/1.1\" 200 265 \"https://blubracket.blubracket.com/forgot-password?email=ben@blubracket.com\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\"\n",
+    "insertId": "rht6zdt7qkc6jzv85",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-portal-b5ff56b77-p2kcv",
+        "container_name": "portal"
+      }
+    },
+    "timestamp": "2020-01-14T01:03:30.959897612Z",
+    "severity": "INFO",
+    "labels": {
+      "k8s-pod/pod-template-hash": "b5ff56b77",
+      "k8s-pod/role": "portal",
+      "k8s-pod/tier": "frontend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stdout",
+    "receiveTimestamp": "2020-01-14T01:03:33.499195615Z"
+  },
+  {
+    "textPayload": "': 'd892386d355380de0e96c0012153d2bd119d00af', 'distinct': False, 'message': 'Use single celery app', 'timestamp': '2020-01-12T17:57:51+05:30', 'url': 'https://github.com/BluBracket/server/commit/7025298d3af63c6c560a9c6f3c45b1465f6aded1', 'author': {'name': 'srinivasakartheek', 'email': 'kartheek@beehyv.com', 'username': 'srinivasakartheek'}, 'committer': {'name': 'srinivasakartheek', 'email': 'kartheek@beehyv.com', 'username': 'srinivasakartheek'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py']}, {'id': '6356e65f0a2c4682a58a46ae1932ec41409deaaa', 'tree_id': 'af624458f29c6a59b2fb4c7d628c3143537861cf', 'distinct': False, 'message': 'Move blu_task to app.py', 'timestamp': '2020-01-12T17:57:51+05:30', 'url': 'https://github.com/BluBracket/server/commit/6356e65f0a2c4682a58a46ae1932ec41409deaaa', 'author': {'name': 'srinivasakartheek', 'email': 'kartheek@beehyv.com', 'username': 'srinivasakartheek'}, 'committer': {'name': 'srinivasakartheek', 'email': 'kartheek@beehyv.com', 'username': 'srinivasakartheek'}, 'added': [], 'removed': ['blubracket/server/tasks/BluTask.py'], 'modified': ['blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/app.py']}, {'id': 'd55b5880c2aa5cd36532e56b7ccc929131918e32', 'tree_id': '8fc537efa0573fefe8db38c8f46e74b2ede74cfa', 'distinct': False, 'message': \"Merge branch 'master' of github.com:blubracket/server into BLU-2213\", 'timestamp': '2020-01-12T15:38:08-06:00', 'url': 'https://github.com/BluBracket/server/commit/d55b5880c2aa5cd36532e56b7ccc929131918e32', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': ['blubracket/server/handlers/Developer/developer_handler.py'], 'removed': ['blubracket/server/handlers/Developer/DeveloperListHandler.py'], 'modified': ['blubracket/database/dao_base.py', 'blubracket/server/app.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Group/GroupDetailHandler.py', 'blubracket/server/handlers/Group/GroupHandler.py', 'blubracket/server/handlers/HandlerBase.py', 'blubracket/server/route_constants.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/utils/dataclasses.py', 'blubracket/utils/httputils.py', 'blubracket/utils/marshmallow.py', 'database/db_schema.postgres.sql.1', 'tests/conftest.py', 'tests/database/test_dao_base.py', 'tests/server/handlers/test_developer_handler.py']}, {'id': 'e4edff858e725b44523be59947646d7d95f021ba', 'tree_id': '11bf8a999d252f082c49af28da6c2e655c350da8', 'distinct': False, 'message': 'Beginning to adapt developer service to the actual API', 'timestamp': '2020-01-12T15:51:36-06:00', 'url': 'https://github.com/BluBracket/server/commit/e4edff858e725b44523be59947646d7d95f021ba', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py']}, {'id': 'f60f7a0dc90de4b8cf50a79a771f6a80f138dfa7', 'tree_id': '23d480f9ad4bdcf89eba6a13b3dd6b50c82f6003', 'distinct': False, 'message': 'Finish adapting for new API', 'timestamp': '2020-01-12T16:06:37-06:00', 'url': 'https://github.com/BluBracket/server/commit/f60f7a0dc90de4b8cf50a79a771f6a80f138dfa7', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/services/external/DeveloperService.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'tests/server/tasks/test_process_repo_commits_task.py']}, {'id': '0b380b27777208b3e36ff8fdb1848b359edc123e', 'tree_id': 'af624458f29c6a59b2fb4c7d628c3143537861cf', 'distinct': False, 'message': 'Merge pull request #323 from BluBracket/BLU-2330\\n\\nBLU-2330 Make python celery tasks robust to failures', 'timestamp': '2020-01-13T06:39:09+05:30', 'url': 'https://github.com/BluBracket/server/commit/0b380b27777208b3e36ff8fdb1848b359edc123e', 'author': {'name': 'Srinivasa Kartheek', 'email': '50820829+srinivasakartheek@users.noreply.github.com', 'username': 'srinivasakartheek'}, 'committer': {'name': 'GitHub', 'email': 'noreply@github.com', 'username': 'web-flow'}, 'added': [], 'removed': [], 'modified': ['Pipfile', 'Pipfile.lock', 'blubracket/server/data/Config.py', 'blubracket/server/handlers/Repo/RepoHandler.py', 'blubracket/server/handlers/Settings/RepoSettingsHandler.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/server/tasks/app.py', 'blubracket/server/tasks/celeryconfig.py', 'blubracket/utils/task_utils.py', 'build.py', 'run.sh', 'tests/utils/test_dnsutils.py']}, {'id': '9fd2ab95a6f54771d67f3199b09db72579543f13', 'tree_id': '2245c3d2bfc7deca15f29a50752e8379e7e93ae4', 'distinct': False, 'message': 'Cleaning up small bugs with developer API and fixing user sync', 'timestamp': '2020-01-12T21:05:09-06:00', 'url': 'https://github.com/BluBracket/server/commit/9fd2ab95a6f54771d67f3199b09db72579543f13', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/data/Access.py', 'blubracket/server/data/Origin.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Developer/developer_handler.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/services/external/AccessService.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoInterface.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/utils/httputils.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/tasks/test_sync_user_permissions_task.py']}, {'id': 'd062d8957eafb7fb50d29a9164e5e5a5171aeaec', 'tree_id': 'd9c8b2a083f4258f36d866d25af8d6c760ef46c5', 'distinct': False, 'message': 'Merge with master', 'timestamp': '2020-01-12T21:07:50-06:00', 'url': 'https://github.com/BluBracket/server/commit/d062d8957eafb7fb50d29a9164e5e5a5171aeaec', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['Pipfile', 'Pipfile.lock', 'blubracket/server/data/Config.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/handlers/Repo/RepoHandler.py', 'blubracket/server/handlers/Settings/RepoSettingsHandler.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/server/tasks/app.py', 'blubracket/server/tasks/celeryconfig.py', 'blubracket/utils/task_utils.py', 'build.py', 'run.sh', 'tests/utils/test_dnsutils.py']}, {'id': 'fc55bc67603c87278b6926ccf0b7ef7761a61193', 'tree_id': '56c8ec6ba14c3fc737f6054314ac81bbd976b9f5', 'distinct': False, 'message': 'New task should retry', 'timestamp': '2020-01-12T21:09:02-06:00', 'url': 'https://github.com/BluBracket/server/commit/fc55bc67603c87278b6926ccf0b7ef7761a61193', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/tasks/GitGatewayTasks.py']}, {'id': 'be1cb741abbd48db76dfcedc5d45d38201202cfb', 'tree_id': '63bd28f512a2f36f3e0a2fc130525ccc7e8d9cf9', 'distinct': False, 'message': 'Test cleanup', 'timestamp': '2020-01-12T21:39:20-06:00', 'url': 'https://github.com/BluBracket/server/commit/be1cb741abbd48db76dfcedc5d45d38201202cfb', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/repo/GitLabInterface.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/utils/httputils.py', 'tests/mocks/external_services/developer_service_mock.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/services/repo/test_gitlab_interface.py', 'tests/server/tasks/test_process_repo_commits_task.py', 'tests/server/tasks/test_sync_user_permissions_task.py']}, {'id': '41cbfb4c3fe9cf4cc4f5e6e9c021733b9615f92b', 'tree_id': 'ab9f1a9ced9222f17a6569d6e2c95e88d58a4004', 'distinct': False, 'message': 'linter', 'timestamp': '2020-01-12T21:43:38-06:00', 'url': 'https://github.com/BluBracket/server/commit/41cbfb4c3fe9cf4cc4f5e6e9c021733b9615f92b', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['tests/server/services/repo/test_github_interface.py']}, {'id': '98ea9864188482e5650193361a760ab5ddd5bd39', 'tree_id': 'ab9f1a9ced9222f17a6569d6e2c95e88d58a4004', 'distinct': False, 'message': 'Merge pull request #310 from BluBracket/BLU-2213\\n\\nBLU-2213: Agentless commit processing', 'timestamp': '2020-01-12T22:15:37-06:00', 'url': 'https://github.com/BluBracket/server/commit/98ea9864188482e5650193361a760ab5ddd5bd39', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'GitHub', 'email': 'noreply@github.com', 'username': 'web-flow'}, 'added': ['blubracket/server/models/commit.py', 'tests/server/tasks/test_process_repo_commits_task.py'], 'removed': [], 'modified': ['blubracket/server/data/Access.py', 'blubracket/server/data/BluUser.py', 'blubracket/server/data/DynamicConfig.py', 'blubracket/server/data/Origin.py', 'blubracket/server/data/agent/scan_payload_processor.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Developer/developer_handler.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/models/Users.py', 'blubracket/server/services/external/AccessService.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/server/services/repo/GitLabInterface.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/services/repo/RepoInterface.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'tests/conftest.py', 'tests/mocks/external_services/developer_service_mock.py', 'tests/mocks/repo_interfaces/github_interface_mock.py', 'tests/server/data/test_access.py', 'tests/server/data/users.py', 'tests/server/handlers/test_user_handler.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/services/repo/test_gitlab_interface.py', 'tests/server/tasks/test_sync_user_permissions_task.py']}, {'id': '0c2d3df34f3579f1d3460914d10538c01a5a389a', 'tree_id': '86e1560584a44852c0c6b67d929a36ef670d4cf5', 'distinct': True, 'message': \"Merge branch 'master' into BLU-2163\", 'timestamp': '2020-01-13T14:34:33+05:30', 'url': 'https://github.com/BluBracket/server/commit/0c2d3df34f3579f1d3460914d10538c01a5a389a', 'author': {'name': 'arnob', 'email': 'arnob@beehyv.com', 'username': 'arnob93'}, 'committer': {'name': 'arnob', 'email': 'arnob@beehyv.com', 'username': 'arnob93'}, 'added': ['blubracket/server/data/AccessDTO.py', 'blubracket/server/data/BluGroup.py', 'blubracket/server/data/GroupDeveloper.py', 'blubracket/server/handlers/Access/AccessSchema.py', 'blubracket/server/handlers/Developer/developer_handler.py', 'blubracket/server/handlers/Group/GroupDeveloperSchema.py', 'blubracket/server/handlers/Group/GroupSchema.py', 'blubracket/server/handlers/Group/__init__.py', 'blubracket/server/models/commit.py', 'blubracket/server/services/internal/group_service.py', 'tests/server/tasks/test_process_repo_commits_task.py'], 'removed': ['blubracket/server/handlers/Developer/DeveloperListHandler.py'], 'modified': ['Pipfile', 'Pipfile.lock', 'blubracket/database/dao_base.py', 'blubracket/server/app.py', 'blubracket/server/data/Access.py', 'blubracket/server/data/BluUser.py', 'blubracket/server/data/Config.py', 'blubracket/server/data/DynamicConfig.py', 'blubracket/server/data/Origin.py', 'blubracket/server/data/agent/scan_payload_processor.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/handlers/Group/GroupDetailHandler.py', 'blubracket/server/handlers/Group/GroupHandler.py', 'blubracket/server/handlers/HandlerBase.py', 'blubracket/server/handlers/Repo/RepoHandler.py', 'blubracket/server/handlers/RepoPermissionSchema.py', 'blubracket/server/handlers/Settings/RepoSettingsHandler.py', 'blubracket/server/handlers/Swagger/SwaggerHandler.py', 'blubracket/server/handlers/Tenant/TenantHandler.py', 'blubracket/server/models/Access.py', 'blubracket/server/models/Users.py', 'blubracket/server/route_constants.py', 'blubracket/server/services/external/AccessService.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/server/services/repo/GitLabInterface.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/services/repo/RepoInterface.py', 'blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/server/tasks/app.py', 'blubracket/server/tasks/celeryconfig.py', 'blubracket/utils/dataclasses.py', 'blubracket/utils/httputils.py', 'blubracket/utils/marshmallow.py', 'blubracket/utils/task_utils.py', 'build.py', 'database/db_schema.postgres.sql.1', 'run.sh', 'tests/conftest.py', 'tests/database/test_dao_base.py', 'tests/mocks/external_services/developer_service_mock.py', 'tests/mocks/repo_interfaces/github_interface_mock.py', 'tests/server/data/test_access.py', 'tests/server/data/users.py', 'tests/server/handlers/test_developer_handler.py', 'tests/server/handlers/test_group_delete_handler.py', 'tests/server/handlers/test_group_get_handler.py', 'tests/server/handlers/test_group_post_handler.py', 'tests/server/handlers/test_user_handler.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/services/repo/test_gitlab_interface.py', 'tests/server/tasks/test_sync_user_permissions_task.py', 'tests/utils/test_dnsutils.py']}], 'head_commit': {'id': '0c2d3df34f3579f1d3460914d10538c01a5a389a', 'tree_id': '86e1560584a44852c0c6b67d929a36ef670d4cf5', 'distinct': True, 'message': \"Merge branch 'master' into BLU-2163\", 'timestamp': '2020-01-13T14:34:33+05:30', 'url': 'https://github.com/BluBracket/server/commit/0c2d3df34f3579f1d3460914d10538c01a5a389a', 'author': {'name': 'arnob', 'email': 'arnob@beehyv.com', 'username': 'arnob93'}, 'committer': {'name': 'arnob', 'email': 'arnob@beehyv.com', 'username': 'arnob93'}, 'added': ['blubracket/server/data/AccessDTO.py', 'blubracket/server/data/BluGroup.py', 'blubracket/server/data/GroupDeveloper.py', 'blubracket/server/handlers/Access/AccessSchema.py', 'blubracket/server/handlers/Developer/developer_handler.py', 'blubracket/server/handlers/Group/GroupDeveloperSchema.py', 'blubracket/server/handlers/Group/GroupSchema.py', 'blubracket/server/handlers/Group/__init__.py', 'blubracket/server/models/commit.py', 'blubracket/server/services/internal/group_service.py', 'tests/server/tasks/test_process_repo_commits_task.py'], 'removed': ['blubracket/server/handlers/Developer/DeveloperListHandler.py'], 'modified': ['Pipfile', 'Pipfile.lock', 'blubracket/database/dao_base.py', 'blubracket/server/app.py', 'blubracket/server/data/Access.py', 'blubracket/server/data/BluUser.py', 'blubracket/server/data/Config.py', 'blubracket/server/data/DynamicConfig.py', 'blubracket/server/data/Origin.py', 'blubracket/server/data/agent/scan_payload_processor.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/handlers/Group/GroupDetailHandler.py', 'blubracket/server/handlers/Group/GroupHandler.py', 'blubracket/server/handlers/HandlerBase.py', 'blubracket/server/handlers/Repo/RepoHandler.py', 'blubracket/server/handlers/RepoPermissionSchema.py', 'blubracket/server/handlers/Settings/RepoSettingsHandler.py', 'blubracket/server/handlers/Swagger/SwaggerHandler.py', 'blubracket/server/handlers/Tenant/TenantHandler.py', 'blubracket/server/models/Access.py', 'blubracket/server/models/Users.py', 'blubracket/server/route_constants.py', 'blubracket/server/services/external/AccessService.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/server/services/repo/GitLabInterface.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/services/repo/RepoInterface.py', 'blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/server/tasks/app.py', 'blubracket/server/tasks/celeryconfig.py', 'blubracket/utils/dataclasses.py', 'blubracket/utils/httputils.py', 'blubracket/utils/marshmallow.py', 'blubracket/utils/task_utils.py', 'build.py', 'database/db_schema.postgres.sql.1', 'run.sh', 'tests/conftest.py', 'tests/database/test_dao_base.py', 'tests/mocks/external_services/developer_service_mock.py', 'tests/mocks/repo_interfaces/github_interface_mock.py', 'tests/server/data/test_access.py', 'tests/server/data/users.py', 'tests/server/handlers/test_developer_handler.py', 'tests/server/handlers/test_group_delete_handler.py', 'tests/server/handlers/test_group_get_handler.py', 'tests/server/handlers/test_group_post_handler.py', 'tests/server/handlers/test_user_handler.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/services/repo/test_gitlab_interface.py', 'tests/server/tasks/test_sync_user_permissions_task.py', 'tests/utils/test_dnsutils.py']}}\" request_id=2e59cd87c5cd0efaca8d19c9a1df84e4 tenant=blusand tenant_id=None user=None host=blubracket.blubracket.com protocol=http user_agent=\"GitHub-Hookshot/730b3b3\"\n",
+    "insertId": "rht6zdt7qkc6jlg06",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-git-gateway-95c9db96b-xq2ln",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server"
+      }
+    },
+    "timestamp": "2020-01-13T14:25:07.493412582Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-13T14:25:12.672466022Z"
+  },
+  {
+    "textPayload": "': 'd892386d355380de0e96c0012153d2bd119d00af', 'distinct': False, 'message': 'Use single celery app', 'timestamp': '2020-01-12T17:57:51+05:30', 'url': 'https://github.com/BluBracket/server/commit/7025298d3af63c6c560a9c6f3c45b1465f6aded1', 'author': {'name': 'srinivasakartheek', 'email': 'kartheek@beehyv.com', 'username': 'srinivasakartheek'}, 'committer': {'name': 'srinivasakartheek', 'email': 'kartheek@beehyv.com', 'username': 'srinivasakartheek'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py']}, {'id': '6356e65f0a2c4682a58a46ae1932ec41409deaaa', 'tree_id': 'af624458f29c6a59b2fb4c7d628c3143537861cf', 'distinct': False, 'message': 'Move blu_task to app.py', 'timestamp': '2020-01-12T17:57:51+05:30', 'url': 'https://github.com/BluBracket/server/commit/6356e65f0a2c4682a58a46ae1932ec41409deaaa', 'author': {'name': 'srinivasakartheek', 'email': 'kartheek@beehyv.com', 'username': 'srinivasakartheek'}, 'committer': {'name': 'srinivasakartheek', 'email': 'kartheek@beehyv.com', 'username': 'srinivasakartheek'}, 'added': [], 'removed': ['blubracket/server/tasks/BluTask.py'], 'modified': ['blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/app.py']}, {'id': 'd55b5880c2aa5cd36532e56b7ccc929131918e32', 'tree_id': '8fc537efa0573fefe8db38c8f46e74b2ede74cfa', 'distinct': False, 'message': \"Merge branch 'master' of github.com:blubracket/server into BLU-2213\", 'timestamp': '2020-01-12T15:38:08-06:00', 'url': 'https://github.com/BluBracket/server/commit/d55b5880c2aa5cd36532e56b7ccc929131918e32', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': ['blubracket/server/handlers/Developer/developer_handler.py'], 'removed': ['blubracket/server/handlers/Developer/DeveloperListHandler.py'], 'modified': ['blubracket/database/dao_base.py', 'blubracket/server/app.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Group/GroupDetailHandler.py', 'blubracket/server/handlers/Group/GroupHandler.py', 'blubracket/server/handlers/HandlerBase.py', 'blubracket/server/route_constants.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/utils/dataclasses.py', 'blubracket/utils/httputils.py', 'blubracket/utils/marshmallow.py', 'database/db_schema.postgres.sql.1', 'tests/conftest.py', 'tests/database/test_dao_base.py', 'tests/server/handlers/test_developer_handler.py']}, {'id': 'e4edff858e725b44523be59947646d7d95f021ba', 'tree_id': '11bf8a999d252f082c49af28da6c2e655c350da8', 'distinct': False, 'message': 'Beginning to adapt developer service to the actual API', 'timestamp': '2020-01-12T15:51:36-06:00', 'url': 'https://github.com/BluBracket/server/commit/e4edff858e725b44523be59947646d7d95f021ba', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py']}, {'id': 'f60f7a0dc90de4b8cf50a79a771f6a80f138dfa7', 'tree_id': '23d480f9ad4bdcf89eba6a13b3dd6b50c82f6003', 'distinct': False, 'message': 'Finish adapting for new API', 'timestamp': '2020-01-12T16:06:37-06:00', 'url': 'https://github.com/BluBracket/server/commit/f60f7a0dc90de4b8cf50a79a771f6a80f138dfa7', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/services/external/DeveloperService.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'tests/server/tasks/test_process_repo_commits_task.py']}, {'id': '0b380b27777208b3e36ff8fdb1848b359edc123e', 'tree_id': 'af624458f29c6a59b2fb4c7d628c3143537861cf', 'distinct': False, 'message': 'Merge pull request #323 from BluBracket/BLU-2330\\n\\nBLU-2330 Make python celery tasks robust to failures', 'timestamp': '2020-01-13T06:39:09+05:30', 'url': 'https://github.com/BluBracket/server/commit/0b380b27777208b3e36ff8fdb1848b359edc123e', 'author': {'name': 'Srinivasa Kartheek', 'email': '50820829+srinivasakartheek@users.noreply.github.com', 'username': 'srinivasakartheek'}, 'committer': {'name': 'GitHub', 'email': 'noreply@github.com', 'username': 'web-flow'}, 'added': [], 'removed': [], 'modified': ['Pipfile', 'Pipfile.lock', 'blubracket/server/data/Config.py', 'blubracket/server/handlers/Repo/RepoHandler.py', 'blubracket/server/handlers/Settings/RepoSettingsHandler.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/server/tasks/app.py', 'blubracket/server/tasks/celeryconfig.py', 'blubracket/utils/task_utils.py', 'build.py', 'run.sh', 'tests/utils/test_dnsutils.py']}, {'id': '9fd2ab95a6f54771d67f3199b09db72579543f13', 'tree_id': '2245c3d2bfc7deca15f29a50752e8379e7e93ae4', 'distinct': False, 'message': 'Cleaning up small bugs with developer API and fixing user sync', 'timestamp': '2020-01-12T21:05:09-06:00', 'url': 'https://github.com/BluBracket/server/commit/9fd2ab95a6f54771d67f3199b09db72579543f13', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/data/Access.py', 'blubracket/server/data/Origin.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Developer/developer_handler.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/services/external/AccessService.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoInterface.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/utils/httputils.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/tasks/test_sync_user_permissions_task.py']}, {'id': 'd062d8957eafb7fb50d29a9164e5e5a5171aeaec', 'tree_id': 'd9c8b2a083f4258f36d866d25af8d6c760ef46c5', 'distinct': False, 'message': 'Merge with master', 'timestamp': '2020-01-12T21:07:50-06:00', 'url': 'https://github.com/BluBracket/server/commit/d062d8957eafb7fb50d29a9164e5e5a5171aeaec', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['Pipfile', 'Pipfile.lock', 'blubracket/server/data/Config.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/handlers/Repo/RepoHandler.py', 'blubracket/server/handlers/Settings/RepoSettingsHandler.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/server/tasks/app.py', 'blubracket/server/tasks/celeryconfig.py', 'blubracket/utils/task_utils.py', 'build.py', 'run.sh', 'tests/utils/test_dnsutils.py']}, {'id': 'fc55bc67603c87278b6926ccf0b7ef7761a61193', 'tree_id': '56c8ec6ba14c3fc737f6054314ac81bbd976b9f5', 'distinct': False, 'message': 'New task should retry', 'timestamp': '2020-01-12T21:09:02-06:00', 'url': 'https://github.com/BluBracket/server/commit/fc55bc67603c87278b6926ccf0b7ef7761a61193', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/tasks/GitGatewayTasks.py']}, {'id': 'be1cb741abbd48db76dfcedc5d45d38201202cfb', 'tree_id': '63bd28f512a2f36f3e0a2fc130525ccc7e8d9cf9', 'distinct': False, 'message': 'Test cleanup', 'timestamp': '2020-01-12T21:39:20-06:00', 'url': 'https://github.com/BluBracket/server/commit/be1cb741abbd48db76dfcedc5d45d38201202cfb', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/repo/GitLabInterface.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/utils/httputils.py', 'tests/mocks/external_services/developer_service_mock.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/services/repo/test_gitlab_interface.py', 'tests/server/tasks/test_process_repo_commits_task.py', 'tests/server/tasks/test_sync_user_permissions_task.py']}, {'id': '41cbfb4c3fe9cf4cc4f5e6e9c021733b9615f92b', 'tree_id': 'ab9f1a9ced9222f17a6569d6e2c95e88d58a4004', 'distinct': False, 'message': 'linter', 'timestamp': '2020-01-12T21:43:38-06:00', 'url': 'https://github.com/BluBracket/server/commit/41cbfb4c3fe9cf4cc4f5e6e9c021733b9615f92b', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['tests/server/services/repo/test_github_interface.py']}, {'id': '98ea9864188482e5650193361a760ab5ddd5bd39', 'tree_id': 'ab9f1a9ced9222f17a6569d6e2c95e88d58a4004', 'distinct': False, 'message': 'Merge pull request #310 from BluBracket/BLU-2213\\n\\nBLU-2213: Agentless commit processing', 'timestamp': '2020-01-12T22:15:37-06:00', 'url': 'https://github.com/BluBracket/server/commit/98ea9864188482e5650193361a760ab5ddd5bd39', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'GitHub', 'email': 'noreply@github.com', 'username': 'web-flow'}, 'added': ['blubracket/server/models/commit.py', 'tests/server/tasks/test_process_repo_commits_task.py'], 'removed': [], 'modified': ['blubracket/server/data/Access.py', 'blubracket/server/data/BluUser.py', 'blubracket/server/data/DynamicConfig.py', 'blubracket/server/data/Origin.py', 'blubracket/server/data/agent/scan_payload_processor.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Developer/developer_handler.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/models/Users.py', 'blubracket/server/services/external/AccessService.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/server/services/repo/GitLabInterface.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/services/repo/RepoInterface.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'tests/conftest.py', 'tests/mocks/external_services/developer_service_mock.py', 'tests/mocks/repo_interfaces/github_interface_mock.py', 'tests/server/data/test_access.py', 'tests/server/data/users.py', 'tests/server/handlers/test_user_handler.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/services/repo/test_gitlab_interface.py', 'tests/server/tasks/test_sync_user_permissions_task.py']}, {'id': '0c2d3df34f3579f1d3460914d10538c01a5a389a', 'tree_id': '86e1560584a44852c0c6b67d929a36ef670d4cf5', 'distinct': True, 'message': \"Merge branch 'master' into BLU-2163\", 'timestamp': '2020-01-13T14:34:33+05:30', 'url': 'https://github.com/BluBracket/server/commit/0c2d3df34f3579f1d3460914d10538c01a5a389a', 'author': {'name': 'arnob', 'email': 'arnob@beehyv.com', 'username': 'arnob93'}, 'committer': {'name': 'arnob', 'email': 'arnob@beehyv.com', 'username': 'arnob93'}, 'added': ['blubracket/server/data/AccessDTO.py', 'blubracket/server/data/BluGroup.py', 'blubracket/server/data/GroupDeveloper.py', 'blubracket/server/handlers/Access/AccessSchema.py', 'blubracket/server/handlers/Developer/developer_handler.py', 'blubracket/server/handlers/Group/GroupDeveloperSchema.py', 'blubracket/server/handlers/Group/GroupSchema.py', 'blubracket/server/handlers/Group/__init__.py', 'blubracket/server/models/commit.py', 'blubracket/server/services/internal/group_service.py', 'tests/server/tasks/test_process_repo_commits_task.py'], 'removed': ['blubracket/server/handlers/Developer/DeveloperListHandler.py'], 'modified': ['Pipfile', 'Pipfile.lock', 'blubracket/database/dao_base.py', 'blubracket/server/app.py', 'blubracket/server/data/Access.py', 'blubracket/server/data/BluUser.py', 'blubracket/server/data/Config.py', 'blubracket/server/data/DynamicConfig.py', 'blubracket/server/data/Origin.py', 'blubracket/server/data/agent/scan_payload_processor.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/handlers/Group/GroupDetailHandler.py', 'blubracket/server/handlers/Group/GroupHandler.py', 'blubracket/server/handlers/HandlerBase.py', 'blubracket/server/handlers/Repo/RepoHandler.py', 'blubracket/server/handlers/RepoPermissionSchema.py', 'blubracket/server/handlers/Settings/RepoSettingsHandler.py', 'blubracket/server/handlers/Swagger/SwaggerHandler.py', 'blubracket/server/handlers/Tenant/TenantHandler.py', 'blubracket/server/models/Access.py', 'blubracket/server/models/Users.py', 'blubracket/server/route_constants.py', 'blubracket/server/services/external/AccessService.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/server/services/repo/GitLabInterface.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/services/repo/RepoInterface.py', 'blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/server/tasks/app.py', 'blubracket/server/tasks/celeryconfig.py', 'blubracket/utils/dataclasses.py', 'blubracket/utils/httputils.py', 'blubracket/utils/marshmallow.py', 'blubracket/utils/task_utils.py', 'build.py', 'database/db_schema.postgres.sql.1', 'run.sh', 'tests/conftest.py', 'tests/database/test_dao_base.py', 'tests/mocks/external_services/developer_service_mock.py', 'tests/mocks/repo_interfaces/github_interface_mock.py', 'tests/server/data/test_access.py', 'tests/server/data/users.py', 'tests/server/handlers/test_developer_handler.py', 'tests/server/handlers/test_group_delete_handler.py', 'tests/server/handlers/test_group_get_handler.py', 'tests/server/handlers/test_group_post_handler.py', 'tests/server/handlers/test_user_handler.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/services/repo/test_gitlab_interface.py', 'tests/server/tasks/test_sync_user_permissions_task.py', 'tests/utils/test_dnsutils.py']}], 'head_commit': {'id': '0c2d3df34f3579f1d3460914d10538c01a5a389a', 'tree_id': '86e1560584a44852c0c6b67d929a36ef670d4cf5', 'distinct': True, 'message': \"Merge branch 'master' into BLU-2163\", 'timestamp': '2020-01-13T14:34:33+05:30', 'url': 'https://github.com/BluBracket/server/commit/0c2d3df34f3579f1d3460914d10538c01a5a389a', 'author': {'name': 'arnob', 'email': 'arnob@beehyv.com', 'username': 'arnob93'}, 'committer': {'name': 'arnob', 'email': 'arnob@beehyv.com', 'username': 'arnob93'}, 'added': ['blubracket/server/data/AccessDTO.py', 'blubracket/server/data/BluGroup.py', 'blubracket/server/data/GroupDeveloper.py', 'blubracket/server/handlers/Access/AccessSchema.py', 'blubracket/server/handlers/Developer/developer_handler.py', 'blubracket/server/handlers/Group/GroupDeveloperSchema.py', 'blubracket/server/handlers/Group/GroupSchema.py', 'blubracket/server/handlers/Group/__init__.py', 'blubracket/server/models/commit.py', 'blubracket/server/services/internal/group_service.py', 'tests/server/tasks/test_process_repo_commits_task.py'], 'removed': ['blubracket/server/handlers/Developer/DeveloperListHandler.py'], 'modified': ['Pipfile', 'Pipfile.lock', 'blubracket/database/dao_base.py', 'blubracket/server/app.py', 'blubracket/server/data/Access.py', 'blubracket/server/data/BluUser.py', 'blubracket/server/data/Config.py', 'blubracket/server/data/DynamicConfig.py', 'blubracket/server/data/Origin.py', 'blubracket/server/data/agent/scan_payload_processor.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/handlers/Group/GroupDetailHandler.py', 'blubracket/server/handlers/Group/GroupHandler.py', 'blubracket/server/handlers/HandlerBase.py', 'blubracket/server/handlers/Repo/RepoHandler.py', 'blubracket/server/handlers/RepoPermissionSchema.py', 'blubracket/server/handlers/Settings/RepoSettingsHandler.py', 'blubracket/server/handlers/Swagger/SwaggerHandler.py', 'blubracket/server/handlers/Tenant/TenantHandler.py', 'blubracket/server/models/Access.py', 'blubracket/server/models/Users.py', 'blubracket/server/route_constants.py', 'blubracket/server/services/external/AccessService.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/server/services/repo/GitLabInterface.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/services/repo/RepoInterface.py', 'blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/server/tasks/app.py', 'blubracket/server/tasks/celeryconfig.py', 'blubracket/utils/dataclasses.py', 'blubracket/utils/httputils.py', 'blubracket/utils/marshmallow.py', 'blubracket/utils/task_utils.py', 'build.py', 'database/db_schema.postgres.sql.1', 'run.sh', 'tests/conftest.py', 'tests/database/test_dao_base.py', 'tests/mocks/external_services/developer_service_mock.py', 'tests/mocks/repo_interfaces/github_interface_mock.py', 'tests/server/data/test_access.py', 'tests/server/data/users.py', 'tests/server/handlers/test_developer_handler.py', 'tests/server/handlers/test_group_delete_handler.py', 'tests/server/handlers/test_group_get_handler.py', 'tests/server/handlers/test_group_post_handler.py', 'tests/server/handlers/test_user_handler.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/services/repo/test_gitlab_interface.py', 'tests/server/tasks/test_sync_user_permissions_task.py', 'tests/utils/test_dnsutils.py']}}\" request_id=86daa78102cfb195cd8936c3cf795406 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=None host=blubracket.blubracket.com protocol=http user_agent=\"GitHub-Hookshot/730b3b3\"\n",
+    "insertId": "qx7loqrogd5666zjc",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "pod_name": "blubracket-git-gateway-95c9db96b-swg2s",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-13T14:25:07.054233176Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-13T14:25:13.279874147Z"
+  },
+  {
+    "textPayload": "': 'd892386d355380de0e96c0012153d2bd119d00af', 'distinct': False, 'message': 'Use single celery app', 'timestamp': '2020-01-12T17:57:51+05:30', 'url': 'https://github.com/BluBracket/server/commit/7025298d3af63c6c560a9c6f3c45b1465f6aded1', 'author': {'name': 'srinivasakartheek', 'email': 'kartheek@beehyv.com', 'username': 'srinivasakartheek'}, 'committer': {'name': 'srinivasakartheek', 'email': 'kartheek@beehyv.com', 'username': 'srinivasakartheek'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py']}, {'id': '6356e65f0a2c4682a58a46ae1932ec41409deaaa', 'tree_id': 'af624458f29c6a59b2fb4c7d628c3143537861cf', 'distinct': False, 'message': 'Move blu_task to app.py', 'timestamp': '2020-01-12T17:57:51+05:30', 'url': 'https://github.com/BluBracket/server/commit/6356e65f0a2c4682a58a46ae1932ec41409deaaa', 'author': {'name': 'srinivasakartheek', 'email': 'kartheek@beehyv.com', 'username': 'srinivasakartheek'}, 'committer': {'name': 'srinivasakartheek', 'email': 'kartheek@beehyv.com', 'username': 'srinivasakartheek'}, 'added': [], 'removed': ['blubracket/server/tasks/BluTask.py'], 'modified': ['blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/app.py']}, {'id': 'd55b5880c2aa5cd36532e56b7ccc929131918e32', 'tree_id': '8fc537efa0573fefe8db38c8f46e74b2ede74cfa', 'distinct': False, 'message': \"Merge branch 'master' of github.com:blubracket/server into BLU-2213\", 'timestamp': '2020-01-12T15:38:08-06:00', 'url': 'https://github.com/BluBracket/server/commit/d55b5880c2aa5cd36532e56b7ccc929131918e32', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': ['blubracket/server/handlers/Developer/developer_handler.py'], 'removed': ['blubracket/server/handlers/Developer/DeveloperListHandler.py'], 'modified': ['blubracket/database/dao_base.py', 'blubracket/server/app.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Group/GroupDetailHandler.py', 'blubracket/server/handlers/Group/GroupHandler.py', 'blubracket/server/handlers/HandlerBase.py', 'blubracket/server/route_constants.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/utils/dataclasses.py', 'blubracket/utils/httputils.py', 'blubracket/utils/marshmallow.py', 'database/db_schema.postgres.sql.1', 'tests/conftest.py', 'tests/database/test_dao_base.py', 'tests/server/handlers/test_developer_handler.py']}, {'id': 'e4edff858e725b44523be59947646d7d95f021ba', 'tree_id': '11bf8a999d252f082c49af28da6c2e655c350da8', 'distinct': False, 'message': 'Beginning to adapt developer service to the actual API', 'timestamp': '2020-01-12T15:51:36-06:00', 'url': 'https://github.com/BluBracket/server/commit/e4edff858e725b44523be59947646d7d95f021ba', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py']}, {'id': 'f60f7a0dc90de4b8cf50a79a771f6a80f138dfa7', 'tree_id': '23d480f9ad4bdcf89eba6a13b3dd6b50c82f6003', 'distinct': False, 'message': 'Finish adapting for new API', 'timestamp': '2020-01-12T16:06:37-06:00', 'url': 'https://github.com/BluBracket/server/commit/f60f7a0dc90de4b8cf50a79a771f6a80f138dfa7', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/services/external/DeveloperService.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'tests/server/tasks/test_process_repo_commits_task.py']}, {'id': '0b380b27777208b3e36ff8fdb1848b359edc123e', 'tree_id': 'af624458f29c6a59b2fb4c7d628c3143537861cf', 'distinct': False, 'message': 'Merge pull request #323 from BluBracket/BLU-2330\\n\\nBLU-2330 Make python celery tasks robust to failures', 'timestamp': '2020-01-13T06:39:09+05:30', 'url': 'https://github.com/BluBracket/server/commit/0b380b27777208b3e36ff8fdb1848b359edc123e', 'author': {'name': 'Srinivasa Kartheek', 'email': '50820829+srinivasakartheek@users.noreply.github.com', 'username': 'srinivasakartheek'}, 'committer': {'name': 'GitHub', 'email': 'noreply@github.com', 'username': 'web-flow'}, 'added': [], 'removed': [], 'modified': ['Pipfile', 'Pipfile.lock', 'blubracket/server/data/Config.py', 'blubracket/server/handlers/Repo/RepoHandler.py', 'blubracket/server/handlers/Settings/RepoSettingsHandler.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/server/tasks/app.py', 'blubracket/server/tasks/celeryconfig.py', 'blubracket/utils/task_utils.py', 'build.py', 'run.sh', 'tests/utils/test_dnsutils.py']}, {'id': '9fd2ab95a6f54771d67f3199b09db72579543f13', 'tree_id': '2245c3d2bfc7deca15f29a50752e8379e7e93ae4', 'distinct': False, 'message': 'Cleaning up small bugs with developer API and fixing user sync', 'timestamp': '2020-01-12T21:05:09-06:00', 'url': 'https://github.com/BluBracket/server/commit/9fd2ab95a6f54771d67f3199b09db72579543f13', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/data/Access.py', 'blubracket/server/data/Origin.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Developer/developer_handler.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/services/external/AccessService.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoInterface.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/utils/httputils.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/tasks/test_sync_user_permissions_task.py']}, {'id': 'd062d8957eafb7fb50d29a9164e5e5a5171aeaec', 'tree_id': 'd9c8b2a083f4258f36d866d25af8d6c760ef46c5', 'distinct': False, 'message': 'Merge with master', 'timestamp': '2020-01-12T21:07:50-06:00', 'url': 'https://github.com/BluBracket/server/commit/d062d8957eafb7fb50d29a9164e5e5a5171aeaec', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['Pipfile', 'Pipfile.lock', 'blubracket/server/data/Config.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/handlers/Repo/RepoHandler.py', 'blubracket/server/handlers/Settings/RepoSettingsHandler.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/server/tasks/app.py', 'blubracket/server/tasks/celeryconfig.py', 'blubracket/utils/task_utils.py', 'build.py', 'run.sh', 'tests/utils/test_dnsutils.py']}, {'id': 'fc55bc67603c87278b6926ccf0b7ef7761a61193', 'tree_id': '56c8ec6ba14c3fc737f6054314ac81bbd976b9f5', 'distinct': False, 'message': 'New task should retry', 'timestamp': '2020-01-12T21:09:02-06:00', 'url': 'https://github.com/BluBracket/server/commit/fc55bc67603c87278b6926ccf0b7ef7761a61193', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/tasks/GitGatewayTasks.py']}, {'id': 'be1cb741abbd48db76dfcedc5d45d38201202cfb', 'tree_id': '63bd28f512a2f36f3e0a2fc130525ccc7e8d9cf9', 'distinct': False, 'message': 'Test cleanup', 'timestamp': '2020-01-12T21:39:20-06:00', 'url': 'https://github.com/BluBracket/server/commit/be1cb741abbd48db76dfcedc5d45d38201202cfb', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/repo/GitLabInterface.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/utils/httputils.py', 'tests/mocks/external_services/developer_service_mock.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/services/repo/test_gitlab_interface.py', 'tests/server/tasks/test_process_repo_commits_task.py', 'tests/server/tasks/test_sync_user_permissions_task.py']}, {'id': '41cbfb4c3fe9cf4cc4f5e6e9c021733b9615f92b', 'tree_id': 'ab9f1a9ced9222f17a6569d6e2c95e88d58a4004', 'distinct': False, 'message': 'linter', 'timestamp': '2020-01-12T21:43:38-06:00', 'url': 'https://github.com/BluBracket/server/commit/41cbfb4c3fe9cf4cc4f5e6e9c021733b9615f92b', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'added': [], 'removed': [], 'modified': ['tests/server/services/repo/test_github_interface.py']}, {'id': '98ea9864188482e5650193361a760ab5ddd5bd39', 'tree_id': 'ab9f1a9ced9222f17a6569d6e2c95e88d58a4004', 'distinct': False, 'message': 'Merge pull request #310 from BluBracket/BLU-2213\\n\\nBLU-2213: Agentless commit processing', 'timestamp': '2020-01-12T22:15:37-06:00', 'url': 'https://github.com/BluBracket/server/commit/98ea9864188482e5650193361a760ab5ddd5bd39', 'author': {'name': 'Paul Gerlich', 'email': 'paul@gerlich.io', 'username': 'pgerlich'}, 'committer': {'name': 'GitHub', 'email': 'noreply@github.com', 'username': 'web-flow'}, 'added': ['blubracket/server/models/commit.py', 'tests/server/tasks/test_process_repo_commits_task.py'], 'removed': [], 'modified': ['blubracket/server/data/Access.py', 'blubracket/server/data/BluUser.py', 'blubracket/server/data/DynamicConfig.py', 'blubracket/server/data/Origin.py', 'blubracket/server/data/agent/scan_payload_processor.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Developer/developer_handler.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/models/Users.py', 'blubracket/server/services/external/AccessService.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/server/services/repo/GitLabInterface.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/services/repo/RepoInterface.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'tests/conftest.py', 'tests/mocks/external_services/developer_service_mock.py', 'tests/mocks/repo_interfaces/github_interface_mock.py', 'tests/server/data/test_access.py', 'tests/server/data/users.py', 'tests/server/handlers/test_user_handler.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/services/repo/test_gitlab_interface.py', 'tests/server/tasks/test_sync_user_permissions_task.py']}, {'id': '0c2d3df34f3579f1d3460914d10538c01a5a389a', 'tree_id': '86e1560584a44852c0c6b67d929a36ef670d4cf5', 'distinct': True, 'message': \"Merge branch 'master' into BLU-2163\", 'timestamp': '2020-01-13T14:34:33+05:30', 'url': 'https://github.com/BluBracket/server/commit/0c2d3df34f3579f1d3460914d10538c01a5a389a', 'author': {'name': 'arnob', 'email': 'arnob@beehyv.com', 'username': 'arnob93'}, 'committer': {'name': 'arnob', 'email': 'arnob@beehyv.com', 'username': 'arnob93'}, 'added': ['blubracket/server/data/AccessDTO.py', 'blubracket/server/data/BluGroup.py', 'blubracket/server/data/GroupDeveloper.py', 'blubracket/server/handlers/Access/AccessSchema.py', 'blubracket/server/handlers/Developer/developer_handler.py', 'blubracket/server/handlers/Group/GroupDeveloperSchema.py', 'blubracket/server/handlers/Group/GroupSchema.py', 'blubracket/server/handlers/Group/__init__.py', 'blubracket/server/models/commit.py', 'blubracket/server/services/internal/group_service.py', 'tests/server/tasks/test_process_repo_commits_task.py'], 'removed': ['blubracket/server/handlers/Developer/DeveloperListHandler.py'], 'modified': ['Pipfile', 'Pipfile.lock', 'blubracket/database/dao_base.py', 'blubracket/server/app.py', 'blubracket/server/data/Access.py', 'blubracket/server/data/BluUser.py', 'blubracket/server/data/Config.py', 'blubracket/server/data/DynamicConfig.py', 'blubracket/server/data/Origin.py', 'blubracket/server/data/agent/scan_payload_processor.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/handlers/Group/GroupDetailHandler.py', 'blubracket/server/handlers/Group/GroupHandler.py', 'blubracket/server/handlers/HandlerBase.py', 'blubracket/server/handlers/Repo/RepoHandler.py', 'blubracket/server/handlers/RepoPermissionSchema.py', 'blubracket/server/handlers/Settings/RepoSettingsHandler.py', 'blubracket/server/handlers/Swagger/SwaggerHandler.py', 'blubracket/server/handlers/Tenant/TenantHandler.py', 'blubracket/server/models/Access.py', 'blubracket/server/models/Users.py', 'blubracket/server/route_constants.py', 'blubracket/server/services/external/AccessService.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/server/services/repo/GitLabInterface.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/services/repo/RepoInterface.py', 'blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/server/tasks/app.py', 'blubracket/server/tasks/celeryconfig.py', 'blubracket/utils/dataclasses.py', 'blubracket/utils/httputils.py', 'blubracket/utils/marshmallow.py', 'blubracket/utils/task_utils.py', 'build.py', 'database/db_schema.postgres.sql.1', 'run.sh', 'tests/conftest.py', 'tests/database/test_dao_base.py', 'tests/mocks/external_services/developer_service_mock.py', 'tests/mocks/repo_interfaces/github_interface_mock.py', 'tests/server/data/test_access.py', 'tests/server/data/users.py', 'tests/server/handlers/test_developer_handler.py', 'tests/server/handlers/test_group_delete_handler.py', 'tests/server/handlers/test_group_get_handler.py', 'tests/server/handlers/test_group_post_handler.py', 'tests/server/handlers/test_user_handler.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/services/repo/test_gitlab_interface.py', 'tests/server/tasks/test_sync_user_permissions_task.py', 'tests/utils/test_dnsutils.py']}], 'head_commit': {'id': '0c2d3df34f3579f1d3460914d10538c01a5a389a', 'tree_id': '86e1560584a44852c0c6b67d929a36ef670d4cf5', 'distinct': True, 'message': \"Merge branch 'master' into BLU-2163\", 'timestamp': '2020-01-13T14:34:33+05:30', 'url': 'https://github.com/BluBracket/server/commit/0c2d3df34f3579f1d3460914d10538c01a5a389a', 'author': {'name': 'arnob', 'email': 'arnob@beehyv.com', 'username': 'arnob93'}, 'committer': {'name': 'arnob', 'email': 'arnob@beehyv.com', 'username': 'arnob93'}, 'added': ['blubracket/server/data/AccessDTO.py', 'blubracket/server/data/BluGroup.py', 'blubracket/server/data/GroupDeveloper.py', 'blubracket/server/handlers/Access/AccessSchema.py', 'blubracket/server/handlers/Developer/developer_handler.py', 'blubracket/server/handlers/Group/GroupDeveloperSchema.py', 'blubracket/server/handlers/Group/GroupSchema.py', 'blubracket/server/handlers/Group/__init__.py', 'blubracket/server/models/commit.py', 'blubracket/server/services/internal/group_service.py', 'tests/server/tasks/test_process_repo_commits_task.py'], 'removed': ['blubracket/server/handlers/Developer/DeveloperListHandler.py'], 'modified': ['Pipfile', 'Pipfile.lock', 'blubracket/database/dao_base.py', 'blubracket/server/app.py', 'blubracket/server/data/Access.py', 'blubracket/server/data/BluUser.py', 'blubracket/server/data/Config.py', 'blubracket/server/data/DynamicConfig.py', 'blubracket/server/data/Origin.py', 'blubracket/server/data/agent/scan_payload_processor.py', 'blubracket/server/handlers/Access/AccessHandler.py', 'blubracket/server/handlers/Developer/DeveloperSchema.py', 'blubracket/server/handlers/Git/GitAccountHandler.py', 'blubracket/server/handlers/Group/GroupDetailHandler.py', 'blubracket/server/handlers/Group/GroupHandler.py', 'blubracket/server/handlers/HandlerBase.py', 'blubracket/server/handlers/Repo/RepoHandler.py', 'blubracket/server/handlers/RepoPermissionSchema.py', 'blubracket/server/handlers/Settings/RepoSettingsHandler.py', 'blubracket/server/handlers/Swagger/SwaggerHandler.py', 'blubracket/server/handlers/Tenant/TenantHandler.py', 'blubracket/server/models/Access.py', 'blubracket/server/models/Users.py', 'blubracket/server/route_constants.py', 'blubracket/server/services/external/AccessService.py', 'blubracket/server/services/external/DeveloperService.py', 'blubracket/server/services/external/Service.py', 'blubracket/server/services/internal/developer_service.py', 'blubracket/server/services/repo/GitLabInterface.py', 'blubracket/server/services/repo/GithubInterface.py', 'blubracket/server/services/repo/RepoEventsService.py', 'blubracket/server/services/repo/RepoInterface.py', 'blubracket/server/task_callers/Analyzer.py', 'blubracket/server/tasks/AgentScanTask.py', 'blubracket/server/tasks/EventTask.py', 'blubracket/server/tasks/GitGatewayTasks.py', 'blubracket/server/tasks/app.py', 'blubracket/server/tasks/celeryconfig.py', 'blubracket/utils/dataclasses.py', 'blubracket/utils/httputils.py', 'blubracket/utils/marshmallow.py', 'blubracket/utils/task_utils.py', 'build.py', 'database/db_schema.postgres.sql.1', 'run.sh', 'tests/conftest.py', 'tests/database/test_dao_base.py', 'tests/mocks/external_services/developer_service_mock.py', 'tests/mocks/repo_interfaces/github_interface_mock.py', 'tests/server/data/test_access.py', 'tests/server/data/users.py', 'tests/server/handlers/test_developer_handler.py', 'tests/server/handlers/test_group_delete_handler.py', 'tests/server/handlers/test_group_get_handler.py', 'tests/server/handlers/test_group_post_handler.py', 'tests/server/handlers/test_user_handler.py', 'tests/server/services/repo/test_github_interface.py', 'tests/server/services/repo/test_gitlab_interface.py', 'tests/server/tasks/test_sync_user_permissions_task.py', 'tests/utils/test_dnsutils.py']}}\" request_id=5f5e32ff0bb52bb0d96875f36c29a40d tenant=blusand tenant_id=None user=None host=blubracket.blubracket.com protocol=http user_agent=\"GitHub-Hookshot/730b3b3\"\n",
+    "insertId": "qx7loqrogd5666zir",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "namespace_name": "blubracket",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-git-gateway-95c9db96b-swg2s",
+        "container_name": "server"
+      }
+    },
+    "timestamp": "2020-01-13T14:25:07.017207704Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "95c9db96b",
+      "k8s-pod/role": "git-gateway",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-13T14:25:13.279874147Z"
+  },
+  {
+    "textPayload": "173.164.202.94 - [173.164.202.94] - - [10/Jan/2020:21:45:06 +0000] \"GET /api/auth/reset?email=ben@blubracket.com HTTP/1.1\" 200 328 \"https://blubracket.blubracket.com/forgot-password?email=ben@blubracket.com\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" 651 0.012 [blubracket-blubracket-server-8888] [] 192.168.0.38:8888 384 0.011 200 6f61e365143e5cbec7a87cf90b1ddbd3\n",
+    "insertId": "qx7loqrogd5654lye",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "nginx-ingress-controller-blubracket-77b5df7dbc-q8qpp",
+        "container_name": "nginx-ingress-controller",
+        "namespace_name": "ingress-nginx",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-10T21:45:06.549134476Z",
+    "severity": "INFO",
+    "labels": {
+      "k8s-pod/environment": "blubracket",
+      "k8s-pod/app_kubernetes_io/name": "ingress-nginx",
+      "k8s-pod/app_kubernetes_io/part-of": "ingress-nginx",
+      "k8s-pod/pod-template-hash": "77b5df7dbc"
+    },
+    "logName": "projects/prod-262319/logs/stdout",
+    "receiveTimestamp": "2020-01-10T21:45:10.662630469Z"
+  },
+  {
+    "textPayload": "time=2020-01-10 21:45:06,548 level=INFO module=Application:log_request msg=\"GET /api/auth/reset?email=ben@blubracket.com (192.168.0.36)\" code=\"200\" request_time=\"10.859489440917969\" request_id=6f61e365143e5cbec7a87cf90b1ddbd3 tenant=blubracket tenant_id=8479aef7-f66a-41dd-90a5-265807494e85 user=None host=blubracket.blubracket.com protocol=http user_agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\"\n",
+    "insertId": "qx7loqrogd5654lyg",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-server-74b847bf96-56c66",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-10T21:45:06.548866912Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "74b847bf96",
+      "k8s-pod/role": "server",
+      "k8s-pod/tier": "backend"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-10T21:45:10.662630469Z"
+  },
+  {
+    "textPayload": "time=2020-01-10 21:45:06,538 level=INFO module=HandlerBase:prepare msg=\"GET /api/auth/reset?email=ben@blubracket.com (192.168.0.36)\" Host=\"blubracket.blubracket.com\" X-Request-Id=\"6f61e365143e5cbec7a87cf90b1ddbd3\" X-Real-Ip=\"173.164.202.94\" X-Forwarded-For=\"173.164.202.94\" X-Forwarded-Host=\"blubracket.blubracket.com\" X-Forwarded-Port=\"80\" X-Forwarded-Proto=\"https\" X-Original-Uri=\"/api/auth/reset?email=ben@blubracket.com\" X-Scheme=\"https\" X-Original-Forwarded-For=\"173.164.202.94, 34.107.153.158\" User-Agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" Accept=\"application/json, text/plain, */*\" Accept-Language=\"en-US,en;q=0.5\" Accept-Encoding=\"gzip, deflate, br\" Referer=\"https://blubracket.blubracket.com/forgot-password?email=ben@blubracket.com\" Cookie=\"_ga=GA1.2.1157152124.1578528527; _gid=GA1.2.358173228.1578690587\" X-Cloud-Trace-Context=\"48bc986a790855d55cdcfea1eb52504d/14507111580486683034\" Via=\"1.1 google\" request_id=None tenant=None tenant_id=None user=None host=None protocol=None user_agent=\"None\"\n",
+    "insertId": "qx7loqrogd5654lyf",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-server-74b847bf96-56c66",
+        "container_name": "server",
+        "namespace_name": "blubracket",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2020-01-10T21:45:06.538390348Z",
+    "severity": "ERROR",
+    "labels": {
+      "k8s-pod/pod-template-hash": "74b847bf96",
+      "k8s-pod/role": "server",
+      "k8s-pod/tier": "backend",
+      "k8s-pod/app": "blubracket"
+    },
+    "logName": "projects/prod-262319/logs/stderr",
+    "receiveTimestamp": "2020-01-10T21:45:10.662630469Z"
+  },
+  {
+    "textPayload": "173.164.202.94 - [173.164.202.94] - - [10/Jan/2020:21:45:03 +0000] \"GET /static/media/back-arrow.e71c0066.svg HTTP/1.1\" 200 235 \"https://blubracket.blubracket.com/forgot-password?email=ben@blubracket.com\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\" 629 0.001 [blubracket-blubracket-portal-80] [] 192.168.0.35:80 265 0.000 200 e9986f4bc32ffc8852277c035a8c7917\n",
+    "insertId": "qx7loqrogd5654lya",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "namespace_name": "ingress-nginx",
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "nginx-ingress-controller-blubracket-77b5df7dbc-q8qpp",
+        "container_name": "nginx-ingress-controller"
+      }
+    },
+    "timestamp": "2020-01-10T21:45:03.565847941Z",
+    "severity": "INFO",
+    "labels": {
+      "k8s-pod/environment": "blubracket",
+      "k8s-pod/app_kubernetes_io/name": "ingress-nginx",
+      "k8s-pod/app_kubernetes_io/part-of": "ingress-nginx",
+      "k8s-pod/pod-template-hash": "77b5df7dbc"
+    },
+    "logName": "projects/prod-262319/logs/stdout",
+    "receiveTimestamp": "2020-01-10T21:45:05.566127383Z"
+  },
+  {
+    "textPayload": "192.168.0.36 - - [10/Jan/2020:21:45:03 +0000] \"GET /static/media/back-arrow.e71c0066.svg HTTP/1.1\" 200 265 \"https://blubracket.blubracket.com/forgot-password?email=ben@blubracket.com\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0\"\n",
+    "insertId": "qx7loqrogd5654lyc",
+    "resource": {
+      "type": "k8s_container",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "prod-262319",
+        "cluster_name": "blubracket-prod-us-central1-cluster",
+        "pod_name": "blubracket-portal-b5ff56b77-kpgqq",
+        "container_name": "portal",
+        "namespace_name": "blubracket"
+      }
+    },
+    "timestamp": "2020-01-10T21:45:03.565604738Z",
+    "severity": "INFO",
+    "labels": {
+      "k8s-pod/app": "blubracket",
+      "k8s-pod/pod-template-hash": "b5ff56b77",
+      "k8s-pod/role": "portal",
+      "k8s-pod/tier": "frontend"
+    },
+    "logName": "projects/prod-262319/logs/stdout",
+    "receiveTimestamp": "2020-01-10T21:45:05.566127383Z"
+  }
+]
